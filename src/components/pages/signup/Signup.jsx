@@ -1,10 +1,11 @@
 import Button from "../../UI/button/Button";
 import Form from "../../UI/form/Form";
 import Input from "../../UI/input/Input"
+import StyledSignup from "./StyledSignup";
 
 const Signup = () => {
   return (
-    <main>
+    <StyledSignup>
       <h1>Sign Up</h1>
       <Form>
         <Input
@@ -28,7 +29,7 @@ const Signup = () => {
           type='password'
           id='password'
         />
-        <p>Password must contain at least eight characters, including at least 1 letter and 1 number.</p>
+        <p className="passwordMsg">Password must contain at least eight characters, including at least 1 letter and 1 number.</p>
         <Input
           label='Re-enter password'
           type='password'
@@ -36,7 +37,7 @@ const Signup = () => {
         />
         <Button>Sign Up</Button>
       </Form>
-    </main>
+    </StyledSignup>
   );
 }
 

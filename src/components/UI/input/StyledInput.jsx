@@ -5,7 +5,8 @@ const StyledInput = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   >label {
-  font-weight: 700;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   }
   >input {
     height: 2rem;
