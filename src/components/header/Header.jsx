@@ -1,3 +1,4 @@
+import Button from "../UI/button/Button";
 import StyledHeader from "./StyledHeader";
 
 const Header = () => {
@@ -9,8 +10,8 @@ const Header = () => {
           alt="logo"
         />
         <div className="btn-container">
-          <button>Log in</button>
-          <button>Sign up</button>
+          <Button>Log in</Button>
+          <Button>Sign up</Button>
         </div>
       </div>
     </StyledHeader>
