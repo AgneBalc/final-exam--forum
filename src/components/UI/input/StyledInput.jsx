@@ -13,6 +13,9 @@ const StyledInput = styled.div`
     padding: 3px 7px;
     border: 1px solid rgb(166, 166, 166);
     border-radius: 3px;
+    &.error{
+      border: 1px solid rgb(222, 79, 84);
+    }
   }
 `;
 

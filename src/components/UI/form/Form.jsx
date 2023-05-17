@@ -1,8 +1,8 @@
 import StyledForm from "./StyledForm";
 
-const Form = ({ children }) => {
+const Form = ({ children, onSubmit }) => {
   return (
-    <StyledForm>
+    <StyledForm onSubmit={onSubmit}>
       {children}
     </StyledForm>
   );
