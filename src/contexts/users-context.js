@@ -47,6 +47,7 @@ const UsersProvider = ({ children }) => {
         data,
       }))
   }, []);
+  console.log(users)
 
   return (
     <UsersContext.Provider

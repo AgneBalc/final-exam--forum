@@ -1,11 +1,16 @@
+import { useContext, useState } from 'react';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
+import { v4 as generatedId } from 'uuid';
 import Button from "../../UI/button/Button";
 import Form from "../../UI/form/Form";
 import Input from "../../UI/input/Input"
 import StyledSignup from "./StyledSignup";
+import UsersContext, { USERS_ACTIONS } from '../../../contexts/users-context';
 
 const Signup = () => {
+  const { users: { users }, dispatchUsers } = useContext(UsersContext);
+  const [existingUser, setExistingUser] = useState(false);
 
   const validationSchema = yup.object({
     email: yup
@@ -44,18 +49,38 @@ const Signup = () => {
   });
 
   const initialValues = {
-    email: '',
     username: '',
-    picture: '',
+    email: '',
     password: '',
     passwordConfirm: '',
+    picture: '',
   };
 
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
+      setExistingUser(false);
+
+      const isExisting = users.find(user => user.email === values.email);
+      if (isExisting) {
+        setExistingUser(true);
+        return;
+      };
+
+      const newUser = {
+        id: generatedId(),
+        username: values.username,
+        email: values.email,
+        password: values.password,
+        picture: values.picture ||
+          'https://cdn-icons-png.flaticon.com/512/552/552721.png',
+      };
+
+      dispatchUsers({
+        type: USERS_ACTIONS.ADD,
+        user: newUser,
+      });
     }
   });
 
@@ -72,6 +97,9 @@ const Signup = () => {
         />
         {formik.touched.email && formik.errors.email &&
           <p>{formik.errors.email}</p>}
+        {existingUser &&
+          <p>User with this e-mail already exists!</p>
+        }
         <Input
           label='Username'
           type='text'
