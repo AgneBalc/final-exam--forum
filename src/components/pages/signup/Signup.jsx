@@ -10,7 +10,7 @@ import UsersContext, { USERS_ACTIONS } from '../../../contexts/users-context';
 
 const Signup = () => {
   const { users: { users }, dispatchUsers } = useContext(UsersContext);
-  const [existingUser, setExistingUser] = useState(false);
+  // const [existingUser, setExistingUser] = useState(false);
 
   const validationSchema = yup.object({
     email: yup
@@ -20,12 +20,20 @@ const Signup = () => {
         /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         'Invalid Email!'
       )
+      .test('new', 'User with this e-mail already exists!', function (value) {
+        const existingEmail = users.find(user => user.email === value);
+        return !existingEmail;
+      })
       .required('Required field!'),
     username: yup
       .string()
       .trim()
       .min(3, 'Username is too short! Must be at least 3 characters')
       .max(20, 'Username is too long! Must be 15 characters or less')
+      .test('unique', 'Username already exists!', function (value) {
+        const existingUsername = users.find(user => user.username === value);
+        return !existingUsername;
+      })
       .required('Required field!'),
     picture: yup
       .string()
@@ -60,13 +68,13 @@ const Signup = () => {
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      setExistingUser(false);
+      // setExistingUser(false);
 
-      const isExisting = users.find(user => user.email === values.email);
-      if (isExisting) {
-        setExistingUser(true);
-        return;
-      };
+      // const isExistingEmail = users.find(user => user.email === values.email);
+      // if (isExistingEmail) {
+      //   setExistingUser(true);
+      //   return;
+      // };
 
       const newUser = {
         id: generatedId(),
@@ -97,9 +105,9 @@ const Signup = () => {
         />
         {formik.touched.email && formik.errors.email &&
           <p>{formik.errors.email}</p>}
-        {existingUser &&
+        {/* {existingUser &&
           <p>User with this e-mail already exists!</p>
-        }
+        } */}
         <Input
           label='Username'
           type='text'
@@ -109,7 +117,9 @@ const Signup = () => {
         />
         {formik.touched.username && formik.errors.username &&
           <p>{formik.errors.username}</p>}
-        {/* Nice! Username available */}
+        {formik.touched.username && !formik.errors.username &&
+          <p className='goodMsg'>Nice! Username available!</p>
+        }
         <Input
           label='Picture (URL)'
           type='url'
