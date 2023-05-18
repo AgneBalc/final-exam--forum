@@ -30,7 +30,9 @@ const usersReducer = (state, action) => {
         isLoggedIn: true,
         loggedInUser: action.user,
         users: [...state.users, action.users]
-      }
+      };
+    case USERS_ACTIONS.LOGIN:
+      return { ...state, isLoggedIn: true, loggedInUser: action.user };
     default:
       return state;
   }
