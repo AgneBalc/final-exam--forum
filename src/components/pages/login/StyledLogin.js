@@ -5,6 +5,8 @@ const StyledLogin = styled.main`
   p {
     color: rgb(208, 57, 62);
     font-size: 12px;
+    padding: 0.5rem;
+    background-color: rgba(204, 132, 132, 0.354);
   }
   `;
 
