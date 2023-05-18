@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import StyledPostsContainer from "./StyledPostsContainer";
-import PostsContext from "../../../../contexts/posts-context";
-import Post from "../posts/Post";
+import PostsContext from "../../../../../contexts/posts-context";
+import Post from "../post/Post";
 
 const PostsContainer = () => {
   const { posts } = useContext(PostsContext);
