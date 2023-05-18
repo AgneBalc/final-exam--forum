@@ -11,21 +11,24 @@ const StyledCreatePost = styled.div`
   img {
     height: 36px;
   }
-  input {
-    height: 38px;
-    border: 1px solid #edeff1;
-    background-color: #f6f7f8;
-    padding: 0 1rem;
+  a {
     width: 100%;
     margin-right: 0.5rem;
-    border-radius: 4px;
-    &:hover {
-      border: 1px solid #0665fc;
-    }
-    &::placeholder {
-      font-weight: 300;
-      color: #828282;
-      letter-spacing: 0.5px;
+    input {
+      height: 38px;
+      border: 1px solid #edeff1;
+      background-color: #f6f7f8;
+      padding: 0 1rem;
+      width: 100%;
+      border-radius: 4px;
+      &:hover {
+        border: 1px solid #0665fc;
+      }
+      &::placeholder {
+        font-weight: 300;
+        color: #828282;
+        letter-spacing: 0.5px;
+      }
     }
   }
 `;
