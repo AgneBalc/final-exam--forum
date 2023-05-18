@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledPost = styled.div`
   max-width: 640px;
+  margin: 0 auto;
   position: relative;
   padding: 0.5rem 0.5rem 0.75rem 40px;
   border-radius: 4px;
