@@ -3,70 +3,70 @@
     {
       "id": 1,
       "username": "alex",
-      "emai": "alex@mail.com",
+      "email": "alex@mail.com",
       "password": "password123",
       "picture": "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png"
     },
     {
       "id": 2,
       "username": "ben",
-      "emai": "ben@mail.com",
+      "email": "ben@mail.com",
       "password": "password123",
       "picture": "https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
     },
     {
       "id": 3,
       "username": "jen",
-      "emai": "jen@mail.com",
+      "email": "jen@mail.com",
       "password": "password123",
       "picture": "https://static.vecteezy.com/system/resources/previews/019/896/012/original/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
     },
     {
       "id": 4,
       "username": "women",
-      "emai": "women@mail.com",
+      "email": "women@mail.com",
       "password": "password123",
       "picture": "https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png"
     },
     {
       "id": 5,
       "username": "man",
-      "emai": "man@mail.com",
+      "email": "man@mail.com",
       "password": "password123",
       "picture": "https://www.shareicon.net/data/512x512/2015/09/18/103160_man_512x512.png"
     },
     {
       "id": 6,
       "username": "man",
-      "emai": "man@mail.com",
+      "email": "man@mail.com",
       "password": "password123",
       "picture": "https://www.shareicon.net/data/512x512/2015/09/18/103160_man_512x512.png"
     },
     {
       "id": 7,
       "username": "user",
-      "emai": "user@mail.com",
+      "email": "user@mail.com",
       "password": "password123",
       "picture": "https://img.freepik.com/free-icon/user_318-159711.jpg"
     },
     {
       "id": 8,
       "username": "joe",
-      "emai": "joe@mail.com",
+      "email": "joe@mail.com",
       "password": "password123",
       "picture": "https://www.pngmart.com/files/22/User-Avatar-Profile-PNG-Isolated-Transparent-Picture.png"
     },
     {
       "id": 9,
       "username": "ninja",
-      "emai": "ninja@mail.com",
+      "email": "ninja@mail.com",
       "password": "password123",
       "picture": "https://icon-library.com/images/avatar-png-icon/avatar-png-icon-13.jpg"
     },
     {
       "id": 10,
       "username": "agne",
-      "emai": "agne@mail.com",
+      "email": "agne@mail.com",
       "password": "password123",
       "picture": "https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png"
     }
