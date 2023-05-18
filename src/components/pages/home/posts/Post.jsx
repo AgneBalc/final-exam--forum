@@ -16,6 +16,8 @@ const Post = ({ post }) => {
         <h2>{post.title}</h2>
         {post.image &&
           <img src={post.image} alt={post.title} />}
+        {post.text &&
+          <p className="text">{post.text}</p>}
       </div>
       <div className="comments">
         <i className="fa-regular fa-message"></i>
