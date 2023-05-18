@@ -9,9 +9,11 @@ function App() {
   return (
     <>
       <Header />
-      <Home />
-      {/* <Signup /> */}
-      {/* <Login /> */}
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+      </Routes>
     </>
   );
 }

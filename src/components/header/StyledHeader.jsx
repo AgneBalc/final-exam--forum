@@ -17,8 +17,7 @@ const StyledHeader = styled.header`
     height: 100%;
     margin: 0 auto;
     img {
-      height: 100%;
-      padding: 0.75rem 0;
+      height: 2.5rem;
     }
     .btn-container {
       display: flex;

@@ -5,10 +5,13 @@ import Button from "../../UI/button/Button";
 import { useFormik } from "formik";
 import { useContext, useState } from "react";
 import UsersContext, { USERS_ACTIONS } from "../../../contexts/users-context";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [error, setError] = useState('');
   const { users: { users }, dispatchUsers } = useContext(UsersContext);
+
+  const navigate = useNavigate();
 
   const createErrorMsg = (message) => setError(message);
 
@@ -27,12 +30,15 @@ const Login = () => {
         values.password === existingUser.password ?
         true : false;
 
-      !passwordIsMatching() ?
-        createErrorMsg('Incorrect email address or password!') :
+      if (!passwordIsMatching()) {
+        createErrorMsg('Incorrect email address or password!')
+      } else {
         dispatchUsers({
           type: USERS_ACTIONS.LOGIN,
           user: existingUser
         });
+        navigate('/');
+      };
     }
   });
 
