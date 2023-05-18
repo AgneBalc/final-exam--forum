@@ -2,11 +2,26 @@ import styled from "styled-components";
 
 const StyledLogin = styled.main`
   padding: 2.5rem 0;
-  p {
+  .errorMsg {
     color: rgb(208, 57, 62);
-    font-size: 12px;
-    padding: 0.5rem;
-    background-color: rgba(204, 132, 132, 0.354);
+    font-size: 14px;
+  }
+  .sign-up {
+    color: rgb(108, 107, 107);
+    font-size: 13px;
+    &::before {
+      content: "";
+      height: 1px;
+      background: #1797a080;
+      display: block;
+      margin: 1rem;
+    }
+    p {
+      padding: 0.5rem 1rem;
+      a {
+        color: #1797a0;
+      }
+    }
   }
   `;
 

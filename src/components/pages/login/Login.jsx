@@ -40,20 +40,25 @@ const Login = () => {
     <StyledLogin>
       <h1>Log In</h1>
       <Form onSubmit={formik.handleSubmit}>
-        {error && <p>{error}</p>}
         <Input
           label='Email'
           type='email'
           id='email'
+          className={error ? 'error' : ''}
           {...formik.getFieldProps('email')}
         />
         <Input
           label='Password'
           type='password'
           id='password'
+          className={error ? 'error' : ''}
           {...formik.getFieldProps('password')}
         />
+        {error && <p className="errorMsg">{error}</p>}
         <Button type='submit'>Log In</Button>
+        <div className="sign-up">
+          <p>Don't have an account? <a href="/">Sign up</a></p>
+        </div>
       </Form>
     </StyledLogin>
   );
