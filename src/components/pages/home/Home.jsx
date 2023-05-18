@@ -1,4 +1,5 @@
 import StyledHome from "./StyledHome";
+import Post from "./posts/Post";
 
 const Home = () => {
   return (

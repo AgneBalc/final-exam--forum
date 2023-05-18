@@ -7,6 +7,7 @@ const StyledHeader = styled.header`
   top: 0;
   right: 0;
   box-shadow: 0px 2px 5px 1px #232323;
+  z-index: 10;
   .header-container {
     max-width: 1200px;
     display: flex;
