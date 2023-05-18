@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import { v4 as generatedId } from 'uuid';
@@ -10,7 +10,6 @@ import UsersContext, { USERS_ACTIONS } from '../../../contexts/users-context';
 
 const Signup = () => {
   const { users: { users }, dispatchUsers } = useContext(UsersContext);
-  // const [existingUser, setExistingUser] = useState(false);
 
   const validationSchema = yup.object({
     email: yup
@@ -68,13 +67,6 @@ const Signup = () => {
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      // setExistingUser(false);
-
-      // const isExistingEmail = users.find(user => user.email === values.email);
-      // if (isExistingEmail) {
-      //   setExistingUser(true);
-      //   return;
-      // };
 
       const newUser = {
         id: generatedId(),
@@ -105,9 +97,6 @@ const Signup = () => {
         />
         {formik.touched.email && formik.errors.email &&
           <p>{formik.errors.email}</p>}
-        {/* {existingUser &&
-          <p>User with this e-mail already exists!</p>
-        } */}
         <Input
           label='Username'
           type='text'
