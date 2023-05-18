@@ -2,30 +2,38 @@ import StyledLogin from "./StyledLogin";
 import Form from "../../UI/form/Form";
 import Input from "../../UI/input/Input";
 import Button from "../../UI/button/Button";
+import { useFormik } from "formik";
 
 const Login = () => {
+
+  const initialValues = {
+    email: '',
+    password: '',
+  };
+
+  const formik = useFormik({
+    initialValues,
+    onSubmit: (values) => {
+      console.log(values);
+    }
+  });
+
   return (
     <StyledLogin>
       <h1>Log In</h1>
-      <Form>
+      <Form onSubmit={formik.handleSubmit}>
         <Input
           label='Email'
           type='email'
           id='email'
-        // {...formik.getFieldProps('email')}
-        // className={formik.touched.email && formik.errors.email ? 'error' : ''}
+          {...formik.getFieldProps('email')}
         />
-        {/* {formik.touched.email && formik.errors.email &&
-          <p>{formik.errors.email}</p>} */}
         <Input
           label='Password'
           type='password'
           id='password'
-        // {...formik.getFieldProps('password')}
-        // className={formik.touched.password && formik.errors.password ? 'error' : ''}
+          {...formik.getFieldProps('password')}
         />
-        {/* {formik.touched.password && formik.errors.password &&
-          <p>{formik.errors.password}</p>} */}
         <Button type='submit'>Log In</Button>
       </Form>
     </StyledLogin>
