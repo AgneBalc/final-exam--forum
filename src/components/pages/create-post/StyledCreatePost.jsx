@@ -3,7 +3,6 @@ import styled from "styled-components";
 const StyledCreatePost = styled.main`
   width: 740px;
   .tabs {
-    padding: 0 15px;
     height: 50px;
     display: flex;
     button {
@@ -36,6 +35,10 @@ const StyledCreatePost = styled.main`
         font-weight: 400;
       }
     }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
   }
 `;
 

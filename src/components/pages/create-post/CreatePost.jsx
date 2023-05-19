@@ -1,6 +1,6 @@
 import { useState } from "react";
 import StyledCreatePost from "./StyledCreatePost";
-// import Button from "../../UI/button/Button";
+import Button from "../../UI/button/Button";
 
 const formTabs = [
   {
@@ -30,15 +30,15 @@ const CreatePost = () => {
           </button>
         ))}
       </div>
-      {/* <form>
+      <form>
         <input type="text" />
-        <textarea name="" id="" />
-        <input type="url" />
+        {selectedTab === 'Post' && <textarea name="" id="" />}
+        {selectedTab === "Image" && <input type="url" />}
         <div>
           <Button>Cancel</Button>
           <Button>Post</Button>
         </div>
-      </form> */}
+      </form>
     </StyledCreatePost>
   );
 }

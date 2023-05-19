@@ -3,13 +3,21 @@ import { createContext, useEffect, useReducer } from "react";
 const PostsContext = createContext();
 
 const POSTS_ACTIONS = {
-  GET: 'posts',
+  GET: 'get_all_posts',
+  ADD: 'add_new_post',
 }
 
 const postsReducer = (state, action) => {
   switch (action.type) {
     case POSTS_ACTIONS.GET:
       return action.data;
+    case POSTS_ACTIONS.ADD:
+      fetch('http://localhost:8080/posts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(action.post)
+      });
+      return [...state, action.post];
     default:
       return state;
   }
