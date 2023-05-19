@@ -34,6 +34,7 @@ const PostsProvider = ({ children }) => {
         data,
       }))
   }, []);
+  console.log(posts);
 
   return (
     <PostsContext.Provider

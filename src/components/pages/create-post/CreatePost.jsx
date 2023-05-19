@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import StyledCreatePost from "./StyledCreatePost";
 import Button from "../../UI/button/Button";
+import PostsContext, { POSTS_ACTIONS } from "../../../contexts/posts-context";
+import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+import { v4 as generatedId } from 'uuid';
+import UsersContext from "../../../contexts/users-context";
 
 const formTabs = [
   {
@@ -15,6 +20,37 @@ const formTabs = [
 
 const CreatePost = () => {
   const [selectedTab, setSelectedTab] = useState(formTabs[0].title);
+  const { dispatchPosts } = useContext(PostsContext);
+  const { users: { loggedInUser } } = useContext(UsersContext);
+  const navigate = useNavigate();
+
+  const initialValues = {
+    title: '',
+    text: '',
+    image: ''
+  };
+
+  const formik = useFormik({
+    initialValues,
+    onSubmit: (values) => {
+      const newPost = {
+        id: generatedId(),
+        // userId: loggedInUser.id,
+        title: values.title,
+        text: values.text,
+        image: values.image,
+        likes: 0,
+        wasEdited: false
+      };
+      console.log(newPost);
+
+      dispatchPosts({
+        type: POSTS_ACTIONS.ADD,
+        post: newPost,
+      });
+      navigate('/');
+    }
+  });
 
   return (
     <StyledCreatePost>
@@ -30,13 +66,27 @@ const CreatePost = () => {
           </button>
         ))}
       </div>
-      <form>
-        <input type="text" />
-        {selectedTab === 'Post' && <textarea name="" id="" />}
-        {selectedTab === "Image" && <input type="url" />}
+      <form onSubmit={formik.handleSubmit}>
+        <input
+          id="title"
+          type="text"
+          {...formik.getFieldProps('title')}
+        />
+        {selectedTab === 'Post' &&
+          <textarea
+            id="text"
+            {...formik.getFieldProps('text')}
+          />}
+        {selectedTab === "Image" &&
+          <input
+            id="image"
+            type="url"
+            {...formik.getFieldProps('image')}
+          />
+        }
         <div>
           <Button>Cancel</Button>
-          <Button>Post</Button>
+          <Button type='submit'>Post</Button>
         </div>
       </form>
     </StyledCreatePost>
