@@ -35,7 +35,7 @@ const CreatePost = () => {
     onSubmit: (values) => {
       const newPost = {
         id: generatedId(),
-        // userId: loggedInUser.id,
+        userId: loggedInUser.id,
         title: values.title,
         text: values.text,
         image: values.image,
