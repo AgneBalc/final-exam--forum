@@ -23,6 +23,17 @@ const StyledHeader = styled.header`
       display: flex;
       gap: 1rem;
     }
+    .loggedIn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
   }
 `;
 

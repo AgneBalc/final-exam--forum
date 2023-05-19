@@ -1,8 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../UI/button/Button";
 import StyledHeader from "./StyledHeader";
+import { useContext } from "react";
+import UsersContext, { USERS_ACTIONS } from "../../contexts/users-context";
 
 const Header = () => {
+  const { users: { isLoggedIn, loggedInUser }, dispatchUsers } = useContext(UsersContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    dispatchUsers({ type: USERS_ACTIONS.LOGOUT, });
+    navigate('/');
+  }
+
   return (
     <StyledHeader>
       <div className="header-container">
@@ -12,14 +22,24 @@ const Header = () => {
             alt="logo"
           />
         </Link>
-        <div className="btn-container">
-          <Link to='/login'>
-            <Button>Log in</Button>
-          </Link>
-          <Link to='/signup'>
-            <Button>Sign up</Button>
-          </Link>
-        </div>
+        {isLoggedIn ? (
+          <div className="loggedIn">
+            <div className="user-info">
+              <img src={loggedInUser.picture} alt={loggedInUser.username} />
+              <span>{loggedInUser.username}</span>
+            </div>
+            <Button onClick={handleLogout}>Log out</Button>
+          </div>
+        ) : (
+          <div className="btn-container">
+            <Link to='/login'>
+              <Button>Log in</Button>
+            </Link>
+            <Link to='/signup'>
+              <Button>Sign up</Button>
+            </Link>
+          </div>
+        )}
       </div>
     </StyledHeader>
   );
