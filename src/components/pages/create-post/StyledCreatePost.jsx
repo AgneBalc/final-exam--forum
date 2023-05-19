@@ -2,6 +2,17 @@ import styled from "styled-components";
 
 const StyledCreatePost = styled.main`
   width: 740px;
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1rem;
+  }
+  section {
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 2rem 0;
+  }
   .tabs {
     height: 50px;
     display: flex;
@@ -13,13 +24,14 @@ const StyledCreatePost = styled.main`
       gap: 0.5rem;
       height: 100%;
       cursor: pointer;
-      color: #878a8c80;
+      color: #878a8c;
       border-width: 0px 1px 1px 0px;
+      border-style: solid;
       border-bottom-color: #edeff1;
       border-right-color: #edeff1;
       background-color: #fff;
       &:hover {
-        background-color: #dae0e6;
+        background-color: #f6f7f8;
       }
       &.selected {
         color: #0079d3;
@@ -39,6 +51,49 @@ const StyledCreatePost = styled.main`
   form {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    input,
+    textarea {
+      border-radius: 4px;
+      border: 1px solid #edeff1;
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+      outline: none;
+      &:focus {
+        border: 1px solid rgb(26, 26, 27);
+      }
+    }
+    input[type='text'] {
+      height: 39px;
+    }
+    input[type='url'] {
+      height: 66px;
+      overflow-wrap: break-word;
+    }
+    textarea {
+      width: 100%;
+      height: 250px;
+      resize: none;
+      word-wrap: break-word;
+    }
+  }
+  .buttons {
+    align-self: flex-end;
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    button:first-child {
+      border: 1px solid rgb(208, 57, 62);
+      &:hover {
+        background-color: rgb(208, 57, 62);
+        color: #fff;
+      }
+    }
+    button[type='submit'] {
+      background-color: #1797a0;
+      color: #fff;
+    }
   }
 `;
 
