@@ -303,15 +303,6 @@
       "image": "",
       "likes": 9,
       "wasEdited": false
-    },
-    {
-      "id": "2ce70535-4f01-4e29-bda4-9bb32b1a0dea",
-      "userId": 1,
-      "title": "Test",
-      "text": "Some text",
-      "image": "",
-      "likes": 0,
-      "wasEdited": false
     }
   ],
   "comments": [

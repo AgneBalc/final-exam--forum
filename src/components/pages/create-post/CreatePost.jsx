@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import StyledCreatePost from "./StyledCreatePost";
 import Button from "../../UI/button/Button";
 import PostsContext, { POSTS_ACTIONS } from "../../../contexts/posts-context";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { v4 as generatedId } from 'uuid';
 import UsersContext from "../../../contexts/users-context";
@@ -85,7 +85,9 @@ const CreatePost = () => {
           />
         }
         <div>
-          <Button>Cancel</Button>
+          <Link to='/'>
+            <Button>Cancel</Button>
+          </Link>
           <Button type='submit'>Post</Button>
         </div>
       </form>

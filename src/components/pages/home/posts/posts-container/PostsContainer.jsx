@@ -19,11 +19,15 @@ const PostsContainer = () => {
           </Link>
         </div>
       )}
-      {posts.map(post =>
-        <Post
-          key={post.id}
-          post={post}
-        />
+      {posts?.length === 0 ? (
+        <p>Loading...</p>
+      ) : (
+        posts.map(post =>
+          <Post
+            key={post.id}
+            post={post}
+          />
+        )
       )}
     </StyledPostsContainer>
   );
