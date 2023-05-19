@@ -73,12 +73,14 @@ const CreatePost = () => {
             id="title"
             type="text"
             placeholder="Title"
+            required
             {...formik.getFieldProps('title')}
           />
           {selectedTab === 'Post' &&
             <textarea
               id="text"
               placeholder="Text"
+              required
               {...formik.getFieldProps('text')}
             />}
           {selectedTab === "Image" &&
@@ -86,6 +88,7 @@ const CreatePost = () => {
               id="image"
               type="url"
               placeholder="Url"
+              required
               {...formik.getFieldProps('image')}
             />
           }

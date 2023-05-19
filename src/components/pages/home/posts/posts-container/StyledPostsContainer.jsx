@@ -14,6 +14,7 @@ const StyledPostsContainer = styled.section`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    background-color: #fff;
     img {
       height: 36px;
     }
@@ -27,6 +28,7 @@ const StyledPostsContainer = styled.section`
         padding: 0 1rem;
         width: 100%;
         border-radius: 4px;
+        outline: none;
         &:hover {
           border: 1px solid #0665fc;
         }
