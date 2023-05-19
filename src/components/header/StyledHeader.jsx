@@ -34,6 +34,9 @@ const StyledHeader = styled.header`
       align-items: center;
       gap: 0.5rem;
       cursor: pointer;
+      >img{
+        height: 1.5rem;
+      }
     }
   }
 `;
