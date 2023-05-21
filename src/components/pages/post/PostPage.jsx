@@ -8,13 +8,22 @@ import Comment from "../../features/comments/Comment";
 
 const PostPage = () => {
   const { posts } = useContext(PostsContext);
+  const { comments } = useContext(CommentsContext);
   const { id } = useParams();
 
   const post = posts.find(post => post.id === id)
+  const currentPostComments = comments.filter(comment => comment.postId === id);
 
   return (
     <StyledPostPage>
       <Post post={post} />
+      <section className="comments">
+        {currentPostComments.map(comment =>
+          <Comment
+            key={comment.id}
+            comment={comment}
+          />)}
+      </section>
     </StyledPostPage>
   );
 }
