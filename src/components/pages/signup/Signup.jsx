@@ -7,9 +7,12 @@ import Form from "../../UI/form/Form";
 import Input from "../../UI/input/Input"
 import StyledSignup from "./StyledSignup";
 import UsersContext, { USERS_ACTIONS } from '../../../contexts/users-context';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const { users: { users }, dispatchUsers } = useContext(UsersContext);
+
+  const navigate = useNavigate();
 
   const validationSchema = yup.object({
     email: yup
@@ -67,7 +70,6 @@ const Signup = () => {
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-
       const newUser = {
         id: generatedId(),
         username: values.username,
@@ -76,11 +78,11 @@ const Signup = () => {
         picture: values.picture ||
           'https://cdn-icons-png.flaticon.com/512/552/552721.png',
       };
-
       dispatchUsers({
         type: USERS_ACTIONS.ADD,
         user: newUser,
       });
+      navigate('/');
     }
   });
 

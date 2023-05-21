@@ -3,9 +3,9 @@ import { createContext, useEffect, useReducer } from "react";
 const UsersContext = createContext();
 
 const initialState = {
-  isLoggedIn: false,
-  loggedInUser: null,
   users: [],
+  isLoggedIn: localStorage.getItem('loggedInUser') ? true : false,
+  loggedInUser: JSON.parse(localStorage.getItem('loggedInUser')),
 };
 
 const USERS_ACTIONS = {
@@ -25,14 +25,19 @@ const usersReducer = (state, action) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(action.user)
       });
+      localStorage.setItem('loggedInUser', JSON.stringify(action.user));
       return {
         ...state,
         isLoggedIn: true,
         loggedInUser: action.user,
-        users: [...state.users, action.users]
+        users: [...state.users, action.user]
       };
     case USERS_ACTIONS.LOGIN:
+      localStorage.setItem('loggedInUser', JSON.stringify(action.user));
       return { ...state, isLoggedIn: true, loggedInUser: action.user };
+    case USERS_ACTIONS.LOGOUT:
+      localStorage.removeItem('loggedInUser');
+      return { ...state, isLoggedIn: false, loggedInUser: null };
     default:
       return state;
   }
