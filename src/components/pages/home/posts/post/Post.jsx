@@ -29,7 +29,7 @@ const Post = ({ post }) => {
             onClick={handleDropdownMenu}>
             <i className="fa-solid fa-ellipsis"></i>
           </div>
-          {isUserMenuOpen && <DropdownMenu />}
+          {isUserMenuOpen && <DropdownMenu post={post} />}
         </>
       ) : null}
       <Link to={`/post/${post.id}`}>

@@ -18,36 +18,34 @@ const formTabs = [
   }
 ];
 
-const EditPost = () => {
-  const [selectedTab, setSelectedTab] = useState(formTabs[0].title);
+const EditPost = ({ post }) => {
   const { dispatchPosts } = useContext(PostsContext);
   const { users: { loggedInUser } } = useContext(UsersContext);
   const navigate = useNavigate();
 
   const initialValues = {
-    title: '',
-    text: '',
-    image: ''
+    title: post.title,
+    text: post.text,
+    image: post.image
   };
+
+  const filledTabIndex = initialValues.text ? 0 : 1;
+
+  const [selectedTab, setSelectedTab] = useState(formTabs[filledTabIndex].title);
 
   const formik = useFormik({
     initialValues,
     onSubmit: (values) => {
-      const newPost = {
-        id: generatedId(),
-        userId: loggedInUser.id,
+      const editedPost = {
+        id: post.id,
         title: values.title,
         text: values.text,
         image: values.image,
-        likes: 0,
-        wasEdited: false,
-        dateCreated: new Date(),
       };
-      console.log(newPost);
-
+      console.log(editedPost);
       dispatchPosts({
-        type: POSTS_ACTIONS.ADD,
-        post: newPost,
+        type: POSTS_ACTIONS.EDIT,
+        post: editedPost,
       });
       navigate('/');
     }
@@ -97,7 +95,7 @@ const EditPost = () => {
             <Link to='/'>
               <Button>Cancel</Button>
             </Link>
-            <Button type='submit'>Post</Button>
+            <Button type='submit'>Save</Button>
           </div>
         </form>
       </section>

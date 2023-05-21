@@ -3,7 +3,7 @@ import StyledDropdownMenu from "./StyledDropdown";
 import Modal from "../../../../../UI/modal/Modal";
 import EditPost from "../edit-post/EditPost";
 
-const DropdownMenu = () => {
+const DropdownMenu = ({ post }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
@@ -19,7 +19,7 @@ const DropdownMenu = () => {
       </div>
       {isModalOpen && (
         <Modal onClose={handleModalClose}>
-          <EditPost />
+          <EditPost post={post} />
         </Modal>
       )}
       <div className="delete">

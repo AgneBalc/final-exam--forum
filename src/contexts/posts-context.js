@@ -5,6 +5,7 @@ const PostsContext = createContext();
 const POSTS_ACTIONS = {
   GET: 'get_all_posts',
   ADD: 'add_new_post',
+  EDIT: 'edit_post',
 }
 
 const postsReducer = (state, action) => {
@@ -18,6 +19,30 @@ const postsReducer = (state, action) => {
         body: JSON.stringify(action.post)
       });
       return [action.post, ...state];
+    case POSTS_ACTIONS.EDIT:
+      return state.map(post => {
+        if (post.id === action.post.id) {
+          fetch(`http://localhost:8080/posts/${action.post.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              title: action.post.title,
+              text: action.post.text,
+              image: action.post.image,
+              wasEdited: true
+            })
+          });
+          return {
+            ...post,
+            title: action.post.title,
+            text: action.post.text,
+            image: action.post.image,
+            wasEdited: true
+          }
+        } else {
+          return post;
+        }
+      })
     default:
       return state;
   }
