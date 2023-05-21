@@ -16,7 +16,9 @@ const PostPage = () => {
 
   return (
     <StyledPostPage>
-      <Post post={post} />
+      <Post
+        post={post}
+      />
       <section className="comments">
         {currentPostComments.map(comment =>
           <Comment
