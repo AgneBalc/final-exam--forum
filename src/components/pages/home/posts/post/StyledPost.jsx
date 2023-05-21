@@ -10,10 +10,21 @@ const StyledPost = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   background-color: #fff;
+  .was-edited {
+    position: absolute;
+    font-size: 12px;
+    font-style: italic;
+    color: #787c7ec4;
+    right: 3.2rem;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+  }
   .openMenu {
     position: absolute;
-    right: 0.75rem;
-    top: 0.25;
+    right: 0.5rem;
+    top: 0;
+    padding: 0.5rem 0.75rem;
     i {
       color: #898989;
       font-size: 20px;

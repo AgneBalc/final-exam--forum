@@ -22,6 +22,12 @@ const Post = ({ post }) => {
         {/* <i className="fa-solid fa-caret-down"></i> */}
         <i className="fa-solid fa-down-long"></i>
       </div>
+      {post.wasEdited && (
+        <div className="was-edited">
+          <i className="fa-solid fa-pencil"></i>
+          <span>Edited</span>
+        </div>
+      )}
       {loggedInUser && loggedInUser.id === postAuthor.id ? (
         <>
           <div
