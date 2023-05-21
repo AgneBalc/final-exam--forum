@@ -1,17 +1,15 @@
 import styled from "styled-components";
 
-const StyledEditPost = styled.main`
-  width: 740px;
+const StyledEditPost = styled.div`
+padding: 1rem;
   h2 {
     font-size: 20px;
     font-weight: 500;
-    border-bottom: 1px solid #fff;
     padding-bottom: 1rem;
   }
   section {
     background-color: #fff;
     border-radius: 4px;
-    margin: 2rem 0;
   }
   .tabs {
     height: 50px;
@@ -25,17 +23,18 @@ const StyledEditPost = styled.main`
       height: 100%;
       cursor: pointer;
       color: #878a8c;
-      border-width: 0px 1px 1px 0px;
+      /* border-width: 0px 1px 1px 0px;
       border-style: solid;
       border-bottom-color: #edeff1;
-      border-right-color: #edeff1;
+      border-right-color: #edeff1; */
+      border: 1px solid #1797a04f;
       background-color: #fff;
       &:hover {
         background-color: #f6f7f8;
       }
       &.selected {
         color: #0079d3;
-        border-width: 0px 1px 2px 0px;
+        border-width: 1px 1px 2px 1px;
         border-bottom-color: #0079d3;
       }
       span {
@@ -52,11 +51,11 @@ const StyledEditPost = styled.main`
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem;
+    padding: 1rem 0;
     input,
     textarea {
       border-radius: 4px;
-      border: 1px solid #edeff1;
+      border: 1px solid #1797a04f;
       padding: 0.5rem 1rem;
       font-size: 14px;
       outline: none;

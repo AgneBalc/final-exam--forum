@@ -27,7 +27,7 @@ const DropdownMenu = ({ post }) => {
         <span>Edit post</span>
       </div>
       {isEditModalOpen && (
-        <Modal onClose={handleModalClose}>
+        <Modal onClose={handleModalClose} className='edit-modal'>
           <EditPost post={post} />
         </Modal>
       )}

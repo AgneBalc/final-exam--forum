@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import StyledPost from "./StyledPost";
 import UsersContext from "../../../../../contexts/users-context";
 import DropdownMenu from "./dropdown-menu/DropdownMenu";
-import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
   const { users: { users, loggedInUser } } = useContext(UsersContext);
