@@ -7,6 +7,7 @@ import Home from './components/pages/home/Home';
 import CreatePost from './components/pages/create-post/CreatePost';
 import { useContext } from 'react';
 import UsersContext from './contexts/users-context';
+import PostPage from './components/pages/post/PostPage';
 
 function App() {
   const { users: { isLoggedIn } } = useContext(UsersContext);
@@ -18,6 +19,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/add' element={isLoggedIn ? <CreatePost /> : <Navigate to='/login' />} />
+        <Route path='/post/:id' element={<PostPage />} />
       </Routes>
     </>
   );

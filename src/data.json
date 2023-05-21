@@ -79,7 +79,7 @@
       "text": "",
       "image": "https://i.redd.it/bq54d2yu1ss91.jpg",
       "likes": 139,
-      "wasEdited": false,
+      "wasEdited": true,
       "dateCreated": "2019-11-25 09:49:19"
     },
     {
@@ -321,16 +321,6 @@
       "likes": 9,
       "wasEdited": false,
       "dateCreated": "2023-05-09 12:00:24"
-    },
-    {
-      "id": "3e40a6f0-86dd-436a-847f-d9911241916d",
-      "userId": "1",
-      "title": "Test",
-      "text": "Some text",
-      "image": "",
-      "likes": 0,
-      "wasEdited": false,
-      "dateCreated": "2023-05-21T07:53:36.483Z"
     },
     {
       "id": "2934c0e3-5093-42bb-9398-e58ac58a1f1a",
