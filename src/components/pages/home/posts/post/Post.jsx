@@ -3,6 +3,7 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import StyledPost from "./StyledPost";
 import UsersContext from "../../../../../contexts/users-context";
 import DropdownMenu from "./dropdown-menu/DropdownMenu";
+import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
   const { users: { users, loggedInUser } } = useContext(UsersContext);
@@ -21,7 +22,7 @@ const Post = ({ post }) => {
         {/* <i className="fa-solid fa-caret-down"></i> */}
         <i className="fa-solid fa-down-long"></i>
       </div>
-      {loggedInUser.id === postAuthor.id && (
+      {loggedInUser && loggedInUser.id === postAuthor.id ? (
         <>
           <div
             className="openMenu"
@@ -30,20 +31,22 @@ const Post = ({ post }) => {
           </div>
           {isUserMenuOpen && <DropdownMenu />}
         </>
-      )}
-      <div className="content">
-        <p>Posted by {postAuthor.username} {formatDistanceToNow(new Date(post.dateCreated))} ago</p>
-        <h2>{post.title}</h2>
-        {post.image &&
-          <img src={post.image} alt={post.title} />}
-        {post.text &&
-          <p className="text">{post.text}</p>}
-      </div>
-      <div className="comments">
-        <i className="fa-regular fa-message"></i>
-        {/* SUTVARKYTIT KOMENTARU SKAICIU!!!! */}
-        <p>3 Comments</p>
-      </div>
+      ) : null}
+      <Link to={`/post/${post.id}`}>
+        <div className="content">
+          <p>Posted by {postAuthor.username} {formatDistanceToNow(new Date(post.dateCreated))} ago</p>
+          <h2>{post.title}</h2>
+          {post.image &&
+            <img src={post.image} alt={post.title} />}
+          {post.text &&
+            <p className="text">{post.text}</p>}
+        </div>
+        <div className="comments">
+          <i className="fa-regular fa-message"></i>
+          {/* SUTVARKYTIT KOMENTARU SKAICIU!!!! */}
+          <p>3 Comments</p>
+        </div>
+      </Link>
     </StyledPost>
   );
 }
