@@ -1,6 +1,7 @@
 import { useState } from "react";
 import StyledDropdownMenu from "./StyledDropdown";
 import Modal from "../../../../../UI/modal/Modal";
+import EditPost from "../edit-post/EditPost";
 
 const DropdownMenu = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +17,11 @@ const DropdownMenu = () => {
         <i className="fa-solid fa-pencil"></i>
         <span>Edit post</span>
       </div>
-      {isModalOpen && <Modal onClose={handleModalClose} />}
+      {isModalOpen && (
+        <Modal onClose={handleModalClose}>
+          <EditPost />
+        </Modal>
+      )}
       <div className="delete">
         <i className="fa-regular fa-trash-can"></i>
         <span>Delete post</span>
