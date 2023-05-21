@@ -17,7 +17,7 @@ const postsReducer = (state, action) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(action.post)
       });
-      return [...state, action.post];
+      return [action.post, ...state];
     default:
       return state;
   }

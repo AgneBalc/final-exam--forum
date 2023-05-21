@@ -40,7 +40,8 @@ const CreatePost = () => {
         text: values.text,
         image: values.image,
         likes: 0,
-        wasEdited: false
+        wasEdited: false,
+        dateCreated: new Date(),
       };
       console.log(newPost);
 

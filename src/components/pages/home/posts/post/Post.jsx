@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import StyledPost from "./StyledPost";
 import UsersContext from "../../../../../contexts/users-context";
 
@@ -18,7 +19,7 @@ const Post = ({ post }) => {
       </div>
       <div className="content">
         {/* SUTVARKYTIT DATA!!!! */}
-        <p>Posted by {postAuthor.username} xx hours ago</p>
+        <p>Posted by {postAuthor.username} {formatDistanceToNow(new Date(post.dateCreated))} ago</p>
         <h2>{post.title}</h2>
         {post.image &&
           <img src={post.image} alt={post.title} />}
