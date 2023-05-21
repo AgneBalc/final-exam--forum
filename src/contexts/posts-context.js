@@ -66,7 +66,6 @@ const PostsProvider = ({ children }) => {
         data,
       }))
   }, []);
-  console.log(posts);
 
   const handleModalClose = () => setIsEditModalOpen(false);
   const toggleModal = () => setIsEditModalOpen(!isEditModalOpen);

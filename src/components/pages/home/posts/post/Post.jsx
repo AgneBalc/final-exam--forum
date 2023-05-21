@@ -16,10 +16,8 @@ const Post = ({ post }) => {
   return (
     <StyledPost>
       <div className="votes">
-        {/* <i className="fa-solid fa-caret-up"></i> */}
         <i className="fa-solid fa-up-long"></i>
         <span>{post.likes}</span>
-        {/* <i className="fa-solid fa-caret-down"></i> */}
         <i className="fa-solid fa-down-long"></i>
       </div>
       {post.wasEdited && (

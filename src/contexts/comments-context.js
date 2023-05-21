@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 
 const CommentsContext = createContext();
 
@@ -52,6 +52,15 @@ const commentsReducer = (state, action) => {
 
 const CommentsProvider = ({ children }) => {
   const [comments, dispatchComments] = useReducer(commentsReducer, []);
+
+  useEffect(() => {
+    fetch('http://localhost:8080/comments')
+      .then(res => res.json())
+      .then(data => dispatchComments({
+        type: COMMENTS_ACTIONS.GET,
+        data,
+      }))
+  }, []);
 
   return (
     <CommentsContext.Provider
