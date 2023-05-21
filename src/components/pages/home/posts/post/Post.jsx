@@ -1,12 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import StyledPost from "./StyledPost";
 import UsersContext from "../../../../../contexts/users-context";
+import DropdownMenu from "./dropdown-menu/DropdownMenu";
 
 const Post = ({ post }) => {
-  const { users: { users } } = useContext(UsersContext);
+  const { users: { users, loggedInUser } } = useContext(UsersContext);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
   const postAuthor = users.find(user => user.id === post.userId);
+
+  const handleDropdownMenu = () => setIsUserMenuOpen(!isUserMenuOpen);
 
   return (
     <StyledPost>
@@ -17,8 +21,17 @@ const Post = ({ post }) => {
         {/* <i className="fa-solid fa-caret-down"></i> */}
         <i className="fa-solid fa-down-long"></i>
       </div>
+      {loggedInUser.id === postAuthor.id && (
+        <>
+          <div
+            className="openMenu"
+            onClick={handleDropdownMenu}>
+            <i className="fa-solid fa-ellipsis"></i>
+          </div>
+          {isUserMenuOpen && <DropdownMenu />}
+        </>
+      )}
       <div className="content">
-        {/* SUTVARKYTIT DATA!!!! */}
         <p>Posted by {postAuthor.username} {formatDistanceToNow(new Date(post.dateCreated))} ago</p>
         <h2>{post.title}</h2>
         {post.image &&

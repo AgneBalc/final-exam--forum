@@ -10,6 +10,19 @@ const StyledPost = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   background-color: #fff;
+  .openMenu {
+    position: absolute;
+    right: 0.75rem;
+    top: 0.25;
+    i {
+      color: #898989;
+      font-size: 20px;
+      cursor: pointer;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
   .votes {
     width: 40px;
     position: absolute;
