@@ -1,13 +1,11 @@
-import { useState } from "react";
+import { useContext } from "react";
 import StyledDropdownMenu from "./StyledDropdown";
 import Modal from "../../../../../UI/modal/Modal";
 import EditPost from "../edit-post/EditPost";
+import PostsContext from "../../../../../../contexts/posts-context";
 
 const DropdownMenu = ({ post }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const toggleModal = () => setIsModalOpen(!isModalOpen);
-  const handleModalClose = () => setIsModalOpen(false);
+  const { toggleModal, handleModalClose, isEditModalOpen } = useContext(PostsContext);
 
   return (
     <StyledDropdownMenu>
@@ -17,7 +15,7 @@ const DropdownMenu = ({ post }) => {
         <i className="fa-solid fa-pencil"></i>
         <span>Edit post</span>
       </div>
-      {isModalOpen && (
+      {isEditModalOpen && (
         <Modal onClose={handleModalClose}>
           <EditPost post={post} />
         </Modal>

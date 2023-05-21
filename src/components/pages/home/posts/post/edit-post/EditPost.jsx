@@ -1,11 +1,8 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
-import { v4 as generatedId } from 'uuid';
 import StyledEditPost from "./StyledEditPost";
 import Button from "../../../../../UI/button/Button";
 import PostsContext, { POSTS_ACTIONS } from "../../../../../../contexts/posts-context";
-import UsersContext from "../../../../../../contexts/users-context";
 
 const formTabs = [
   {
@@ -19,9 +16,7 @@ const formTabs = [
 ];
 
 const EditPost = ({ post }) => {
-  const { dispatchPosts } = useContext(PostsContext);
-  const { users: { loggedInUser } } = useContext(UsersContext);
-  const navigate = useNavigate();
+  const { dispatchPosts, handleModalClose } = useContext(PostsContext);
 
   const initialValues = {
     title: post.title,
@@ -47,7 +42,7 @@ const EditPost = ({ post }) => {
         type: POSTS_ACTIONS.EDIT,
         post: editedPost,
       });
-      navigate('/');
+      handleModalClose();
     }
   });
 
@@ -92,9 +87,7 @@ const EditPost = ({ post }) => {
             />
           }
           <div className="buttons">
-            <Link to='/'>
-              <Button>Cancel</Button>
-            </Link>
+            <Button type='button' onClick={handleModalClose}>Cancel</Button>
             <Button type='submit'>Save</Button>
           </div>
         </form>
