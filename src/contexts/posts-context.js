@@ -6,6 +6,7 @@ const POSTS_ACTIONS = {
   GET: 'get_all_posts',
   ADD: 'add_new_post',
   EDIT: 'edit_post',
+  DELETE: 'delete_post',
 }
 
 const postsReducer = (state, action) => {
@@ -41,8 +42,13 @@ const postsReducer = (state, action) => {
           }
         } else {
           return post;
-        }
-      })
+        };
+      });
+    case POSTS_ACTIONS.DELETE:
+      fetch(`http://localhost:8080/posts/${action.id}`, {
+        method: 'DELETE'
+      });
+      return state.filter(post => post.id !== action.id);
     default:
       return state;
   }

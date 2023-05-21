@@ -323,16 +323,6 @@
       "dateCreated": "2023-05-09 12:00:24"
     },
     {
-      "id": "3e40a6f0-86dd-436a-847f-d9911241916d",
-      "userId": "1",
-      "title": "Test",
-      "text": "Some more text",
-      "image": "",
-      "likes": 0,
-      "wasEdited": true,
-      "dateCreated": "2023-05-21T07:53:36.483Z"
-    },
-    {
       "id": "2934c0e3-5093-42bb-9398-e58ac58a1f1a",
       "userId": "2",
       "title": "Title",
