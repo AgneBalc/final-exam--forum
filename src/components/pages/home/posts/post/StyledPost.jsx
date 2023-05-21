@@ -5,15 +5,11 @@ const StyledPost = styled.div`
   position: relative;
   padding: 0.5rem 0.5rem 0.75rem 40px;
   border-radius: 4px;
-  cursor: pointer;
   border: 1px solid #ccc;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   background-color: #fff;
-  &:hover {
-    border: 1px solid #898989;
-  }
   .votes {
     width: 40px;
     position: absolute;

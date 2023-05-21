@@ -40,6 +40,12 @@ const StyledPostsContainer = styled.section`
       }
     }
   }
+  >a>div {
+    cursor: pointer;
+    &:hover {
+      border: 1px solid #898989;
+  }
+  }
 `;
 
 export default StyledPostsContainer;
