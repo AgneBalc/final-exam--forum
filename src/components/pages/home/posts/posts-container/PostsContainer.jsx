@@ -23,9 +23,10 @@ const PostsContainer = () => {
         <p>Loading...</p>
       ) : (
         posts.map(post =>
-          <Link to={`/post/${post.id}`}>
+          <Link
+            to={`/post/${post.id}`}
+            key={post.id}>
             <Post
-              key={post.id}
               post={post}
             />
           </Link>
