@@ -1,87 +1,80 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "alex",
-      "email": "alex@mail.com",
+      "id": "1",
+      "username": "WhisperingShadow",
+      "email": "shadow@mail.com",
       "password": "password123",
       "picture": "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png"
     },
     {
-      "id": 2,
-      "username": "ben",
-      "email": "ben@mail.com",
+      "id": "2",
+      "username": "CrimsonLioness",
+      "email": "lion@mail.com",
       "password": "password123",
       "picture": "https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
     },
     {
-      "id": 3,
-      "username": "jen",
-      "email": "jen@mail.com",
+      "id": "3",
+      "username": "SilverArrow",
+      "email": "arrow@mail.com",
       "password": "password123",
       "picture": "https://static.vecteezy.com/system/resources/previews/019/896/012/original/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
     },
     {
-      "id": 4,
-      "username": "women",
-      "email": "women@mail.com",
+      "id": "4",
+      "username": "ElectricNova",
+      "email": "nova@mail.com",
       "password": "password123",
       "picture": "https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png"
     },
     {
-      "id": 5,
-      "username": "man",
-      "email": "man@mail.com",
+      "id": "5",
+      "username": "MidnightEnigma",
+      "email": "enigma@mail.com",
       "password": "password123",
       "picture": "https://www.shareicon.net/data/512x512/2015/09/18/103160_man_512x512.png"
     },
     {
-      "id": 6,
-      "username": "man",
-      "email": "man@mail.com",
+      "id": "6",
+      "username": "CosmicDreamer",
+      "email": "dreamer@mail.com",
       "password": "password123",
       "picture": "https://www.shareicon.net/data/512x512/2015/09/18/103160_man_512x512.png"
     },
     {
-      "id": 7,
-      "username": "user",
-      "email": "user@mail.com",
+      "id": "7",
+      "username": "RadiantPhoenix",
+      "email": "pheonix@mail.com",
       "password": "password123",
       "picture": "https://img.freepik.com/free-icon/user_318-159711.jpg"
     },
     {
-      "id": 8,
-      "username": "joe",
-      "email": "joe@mail.com",
+      "id": "8",
+      "username": "SereneSerenade",
+      "email": "serene@mail.com",
       "password": "password123",
       "picture": "https://www.pngmart.com/files/22/User-Avatar-Profile-PNG-Isolated-Transparent-Picture.png"
     },
     {
-      "id": 9,
-      "username": "ninja",
-      "email": "ninja@mail.com",
+      "id": "9",
+      "username": "EmberGlow",
+      "email": "glow@mail.com",
       "password": "password123",
       "picture": "https://icon-library.com/images/avatar-png-icon/avatar-png-icon-13.jpg"
     },
     {
-      "id": 10,
-      "username": "agne",
-      "email": "agne@mail.com",
+      "id": "10",
+      "username": "CelestialJourney",
+      "email": "journey@mail.com",
       "password": "password123",
       "picture": "https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png"
-    },
-    {
-      "id": "c2bb51fd-f716-4a99-9092-710ce497f28e",
-      "username": "sls",
-      "email": "test@test.lt",
-      "password": "test1234",
-      "picture": "https://cdn-icons-png.flaticon.com/512/552/552721.png"
     }
   ],
   "posts": [
     {
-      "id": 1,
-      "userId": 1,
+      "id": "1",
+      "userId": "1",
       "title": "Why aren’t you playing by the rules of the game!",
       "text": "",
       "image": "https://i.redd.it/bq54d2yu1ss91.jpg",
@@ -89,8 +82,8 @@
       "wasEdited": false
     },
     {
-      "id": 18,
-      "userId": 2,
+      "id": "18",
+      "userId": "2",
       "title": "Ya’ll I did it. I am now officially a frontend developer. HIRED",
       "text": "After ranting on here last week about how much i sucked at data structures and algorithms. i lifted myself up (largely due to the inspiring words i received in this sub) and i got to work. /nwell yesterday i had my third and longest interview with a company… AND TODAY THEY NOTIFIED ME THAT I GOT THE JOB. /nthey started by giving me 3 timed leetcode/hackerank questions. /nthen i had to whiteboard 😫. and the code had to work when written in the ide. n/lastly was a conversational tech interview where they pretty much sat me down in front of 3 geniuses with stone faces (no expression, no smiles, nothing). and they basically rapid fire asked me questions related to frontend. and a little backend.",
       "image": "",
@@ -98,8 +91,8 @@
       "wasEdited": false
     },
     {
-      "id": 2,
-      "userId": 3,
+      "id": "2",
+      "userId": "3",
       "title": "Steal what is stolen",
       "text": "",
       "image": "https://i.redd.it/hwurhp7crzf81.png",
@@ -107,8 +100,8 @@
       "wasEdited": false
     },
     {
-      "id": 3,
-      "userId": 4,
+      "id": "3",
+      "userId": "4",
       "title": "Lets reflect on that for a second",
       "text": "",
       "image": "https://i.redd.it/2clrzuc446ia1.png",
@@ -116,8 +109,8 @@
       "wasEdited": false
     },
     {
-      "id": 19,
-      "userId": 5,
+      "id": "19",
+      "userId": "5",
       "title": "I’m a girl from afghanistan learning programming",
       "text": "Well I don’t have any right to go to university and have education. Because I’m a woman. I’m 21 years old and I really love technology , recently i have moved to iran but here there is not much i can do either. My goal is to become a programmer find a job abroad and save my life and my family. I have been to many courses I’m a front end developer recently I’m learning java but I don’t have any degree , is there any way i can get a degree online something that companies accept and find a job abroad and make it out of here?",
       "image": "",
@@ -125,8 +118,8 @@
       "wasEdited": false
     },
     {
-      "id": 4,
-      "userId": 6,
+      "id": "4",
+      "userId": "6",
       "title": "priorities",
       "text": "",
       "image": "https://i.redd.it/xgfs4jad9r391.jpg",
@@ -134,8 +127,8 @@
       "wasEdited": false
     },
     {
-      "id": 5,
-      "userId": 1,
+      "id": "5",
+      "userId": "1",
       "title": "What about 5000?",
       "text": "",
       "image": "https://i.redd.it/pkcsunr302m61.jpg",
@@ -143,8 +136,8 @@
       "wasEdited": false
     },
     {
-      "id": 6,
-      "userId": 2,
+      "id": "6",
+      "userId": "2",
       "title": "Has this ever happened to you?",
       "text": "",
       "image": "https://i.redd.it/yug2tpbwqzi81.png",
@@ -152,8 +145,8 @@
       "wasEdited": false
     },
     {
-      "id": 20,
-      "userId": 9,
+      "id": "20",
+      "userId": "9",
       "title": "Just pushed my first commit to Google Search!",
       "text": "I've recently gotten a job at Google and today was the first time my code was approved for production! Damn does it feel good to know your own code is out there! Time to celebrate!",
       "image": "",
@@ -161,8 +154,8 @@
       "wasEdited": false
     },
     {
-      "id": 7,
-      "userId": 10,
+      "id": "7",
+      "userId": "10",
       "title": "Well, well, well...",
       "text": "",
       "image": "https://i.redd.it/d4t9eiln5s691.jpg",
@@ -170,8 +163,8 @@
       "wasEdited": false
     },
     {
-      "id": 8,
-      "userId": 5,
+      "id": "8",
+      "userId": "5",
       "title": "Sad truth",
       "text": "",
       "image": "https://i.redd.it/xjyw030edpt81.jpg",
@@ -179,8 +172,8 @@
       "wasEdited": false
     },
     {
-      "id": 21,
-      "userId": 8,
+      "id": "21",
+      "userId": "8",
       "title": "Amazing new developer who joined my company",
       "text": "Recently a new developer joined our team at the company I work and the guy is out of this world. He can see a codebase once, spend an hour max and understand how to navigate through it immediately. We have projects in multiple programming languages and even though he has not worked with them he can easily get around. Now I know people will say 'but all languages share common patters'. Yes, it's true but the guy is able to go through a 3k line project (just one of the many microservices we have) he has never seen before in a language he has never seen before and find the issue in less than 2-3 hours. Also he is knowledge in all areas. DevOps, FE, BE, data analysis, security... it's insane. And on top of all of that our product is really big and complex and people have spend years working in this company and still have gaps yet he seems to pick everything up extremely fast and connect everything together. I really look up to him and admire him but I know he is a very rare case as no one else in my entire company comes even close to that. And he doesn't call himself by a fancy title like many other people do. He always says 'I'm just a developer' and is really extremely humble. And on top of all of that he is always open to help or teach others. I no longer want to become senior, tech lead or principle engineer but rather become someone like him one day.",
       "image": "",
@@ -188,8 +181,8 @@
       "wasEdited": false
     },
     {
-      "id": 9,
-      "userId": 5,
+      "id": "9",
+      "userId": "5",
       "title": "Stacking if else statements be like",
       "text": "",
       "image": "https://i.redd.it/6rbq35occu441.jpg",
@@ -197,8 +190,8 @@
       "wasEdited": false
     },
     {
-      "id": 10,
-      "userId": 9,
+      "id": "10",
+      "userId": "9",
       "title": "Not the time, dad",
       "text": "",
       "image": "https://i.redd.it/2ry044pdv2141.jpg",
@@ -206,8 +199,8 @@
       "wasEdited": false
     },
     {
-      "id": 22,
-      "userId": 2,
+      "id": "22",
+      "userId": "2",
       "title": "developer burnout has me at a brick wall right now",
       "text": "Hi everyone. I am a backend software developer. Been in this kind of role for about 10 years. I have hit a brick wall at the moment, its like 'writers block' I just can't seem to make any progress with my tickets. None of them are difficult or challenging. If I could commit to it I think its not more than an hour of solid work but I have tried everything to break through and make a start, I just can't do it. I am debating changing career. I used to find this really interesting. Any help guys? Sprint ends in a few days and I have run out of excuses!",
       "image": "",
@@ -215,8 +208,8 @@
       "wasEdited": false
     },
     {
-      "id": 11,
-      "userId": 9,
+      "id": "11",
+      "userId": "9",
       "title": "The backend dev and the frontend dev.",
       "text": "",
       "image": "https://i.redd.it/vgo85g9ozfj91.jpg",
@@ -224,8 +217,8 @@
       "wasEdited": false
     },
     {
-      "id": 12,
-      "userId": 4,
+      "id": "12",
+      "userId": "4",
       "title": "Spotted on GitHub",
       "text": "",
       "image": "https://i.redd.it/pfk3p4fuk4f21.jpg",
@@ -233,8 +226,8 @@
       "wasEdited": false
     },
     {
-      "id": 13,
-      "userId": 2,
+      "id": "13",
+      "userId": "2",
       "title": "we owe them..",
       "text": "",
       "image": "https://i.redd.it/1ttdn61rybc91.jpg",
@@ -242,8 +235,8 @@
       "wasEdited": false
     },
     {
-      "id": 23,
-      "userId": 6,
+      "id": "23",
+      "userId": "6",
       "title": "API Design Platform for AI Era: Excited to launch our API Design Studio!",
       "text": "APIs have been around for over 20 years, with 200 million currently in existence and 1.5 billion more to be built in the next 8 years. However, the process of designing, coding and testing APIs is still outdated. /nOur goal was to create a platform that empowers Product Managers to design APIs without requiring extensive knowledge of JSON or YAML. /nIn today's world, B2B integrations rely heavily on APIs, but existing tools are either too developer-centric or hosted solutions. /nWe believe there is potential for Product Management to lead integrations that matter for customers, users, and partners. However, product managers must work with various stakeholders who may not understand the nuances of API integration or value of data. It also takes multiple steps and significant time to go from ideation to implementation. /nWe were looking for a product that supports collaborative innovation, is intuitive for different stakeholders, has governance and standards, and is a modern API development platform. /nSince there was no such product, we developed Conektto: the API-First Design and Test Platform, empowering Product Managers to design APIs and collaborate with developers and testers to generate mock tests, test execution, test data, performance tests, and report results. /nOur free-format API designer allows Product Managers to create OpenAPI specs to communicate with Developers. Additionally, we plan to release composite/aggregate API design and GraphQL capabilities in the future. /nWe've even partnered with Microsoft PowerFx for OpenAI-based code generation. Try out our platform and share your feedback or suggestions! :)",
       "image": "",
@@ -251,8 +244,8 @@
       "wasEdited": false
     },
     {
-      "id": 14,
-      "userId": 7,
+      "id": "14",
+      "userId": "7",
       "title": "always happens",
       "text": "",
       "image": "https://i.redd.it/3u2efcn9yuo91.jpg",
@@ -260,8 +253,8 @@
       "wasEdited": false
     },
     {
-      "id": 15,
-      "userId": 7,
+      "id": "15",
+      "userId": "7",
       "title": "CSS Dev Award. Guess I gotta print one now...",
       "text": "",
       "image": "https://i.redd.it/jbei2s0bn40b1.png",
@@ -269,8 +262,8 @@
       "wasEdited": false
     },
     {
-      "id": 24,
-      "userId": 5,
+      "id": "24",
+      "userId": "5",
       "title": "Where to do a little consulting as a side job?",
       "text": "I feel like I'd like to help small or mid size teams with my 12+ years of experience at 8 different companies/teams. Which online platforms would you recommend and which should I avoid? Or how would you start this process if you were in my socks?",
       "image": "",
@@ -278,8 +271,8 @@
       "wasEdited": false
     },
     {
-      "id": 16,
-      "userId": 6,
+      "id": "16",
+      "userId": "6",
       "title": "I'll just ask him a quick question then go to bed! *boss status changes to 'typing...'*",
       "text": "",
       "image": "https://i.redd.it/h6q2z60io20b1.jpg",
@@ -287,8 +280,8 @@
       "wasEdited": false
     },
     {
-      "id": 17,
-      "userId": 3,
+      "id": "17",
+      "userId": "3",
       "title": "You can give them mine.",
       "text": "",
       "image": "https://i.redd.it/k2tuligvyyza1.jpg",
@@ -296,8 +289,8 @@
       "wasEdited": false
     },
     {
-      "id": 25,
-      "userId": 8,
+      "id": "25",
+      "userId": "8",
       "title": "React Native is TERRIBLE",
       "text": "I sincerely don't understand how it has the industry usage it does. If your app wants to do anything more complicated that just showing images and data, DO NOT USE REACT. /nFor iOS it's almost worth your time, but I have yet to have any React Native Project of size be able to successfully build for Android without 40+ hours of shifting packages, downgrading dependencies, or sifting through thousands of node_modules files to try to find the one line in some shit dependency that breaks everything. Expo doesn't stay up to date with React, and React doesn't stay up to date with iOS or Android. /nI'm telling anyone who is considering React Native just stop. Close your laptop, take a walk, talk to your loved ones, and just DO NOT EVER use React Native",
       "image": "",
@@ -307,593 +300,593 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "userId": 6,
-      "postId": 1,
+      "id": "1",
+      "userId": "6",
+      "postId": "1",
       "text": "As long as they haven't received a signed contract from you, they have no reason to believe you aren't also interviewing elsewhere.",
       "likes": 110,
       "wasEdited": false
     },
     {
-      "id": 2,
-      "userId": 9,
-      "postId": 1,
+      "id": "2",
+      "userId": "9",
+      "postId": "1",
       "text": "it's so funny to me when they ask. like, you're also interviewing other people, what makes you think I wouldn't interview other companies?",
       "likes": 569,
       "wasEdited": false
     },
     {
-      "id": 3,
-      "userId": 1,
-      "postId": 2,
+      "id": "3",
+      "userId": "1",
+      "postId": "2",
       "text": "Programmers only talk with ducks",
       "likes": 30,
       "wasEdited": false
     },
     {
-      "id": 4,
-      "userId": 7,
-      "postId": 2,
+      "id": "4",
+      "userId": "7",
+      "postId": "2",
       "text": "It's our code",
       "likes": 21,
       "wasEdited": false
     },
     {
-      "id": 5,
-      "userId": 6,
-      "postId": 2,
+      "id": "5",
+      "userId": "6",
+      "postId": "2",
       "text": "Programmers do not talk",
       "likes": 19,
       "wasEdited": false
     },
     {
-      "id": 6,
-      "userId": 1,
-      "postId": 3,
+      "id": "6",
+      "userId": "1",
+      "postId": "3",
       "text": "Just surprised they didn't include an ai request.",
       "likes": 113,
       "wasEdited": false
     },
     {
-      "id": 7,
-      "userId": 10,
-      "postId": 3,
+      "id": "7",
+      "userId": "10",
+      "postId": "3",
       "text": "have their cam as a background stream",
       "likes": 206,
       "wasEdited": false
     },
     {
-      "id": 8,
-      "userId": 4,
-      "postId": 3,
+      "id": "8",
+      "userId": "4",
+      "postId": "3",
       "text": "I think we have a disconnect here.",
       "likes": 16,
       "wasEdited": false
     },
     {
-      "id": 9,
-      "userId": 5,
-      "postId": 4,
+      "id": "9",
+      "userId": "5",
+      "postId": "4",
       "text": "That's dirty, but I like it.",
       "likes": 83,
       "wasEdited": false
     },
     {
-      "id": 10,
-      "userId": 8,
-      "postId": 4,
+      "id": "10",
+      "userId": "8",
+      "postId": "4",
       "text": "Wait until your gf enrolls in a CS course...",
       "likes": 38,
       "wasEdited": false
     },
     {
-      "id": 11,
-      "userId": 2,
-      "postId": 4,
+      "id": "11",
+      "userId": "2",
+      "postId": "4",
       "text": "Whats [0] though?",
       "likes": 419,
       "wasEdited": false
     },
     {
-      "id": 12,
-      "userId": 8,
-      "postId": 5,
+      "id": "12",
+      "userId": "8",
+      "postId": "5",
       "text": "I'll need a team and 2 weeks...",
       "likes": 120,
       "wasEdited": false
     },
     {
-      "id": 13,
-      "userId": 7,
-      "postId": 5,
+      "id": "13",
+      "userId": "7",
+      "postId": "5",
       "text": "Ask him to do 500 lines and he'll tell you you should have broken up the task into more easily understandable and reviewable code, rejecting the merge request.",
       "likes": 15,
       "wasEdited": false
     },
     {
-      "id": 14,
-      "userId": 3,
-      "postId": 5,
+      "id": "14",
+      "userId": "3",
+      "postId": "5",
       "text": "I'm no doctor but I believe asking him to do 500 lines would kill him",
       "likes": 41,
       "wasEdited": false
     },
     {
-      "id": 15,
-      "userId": 2,
-      "postId": 5,
+      "id": "15",
+      "userId": "2",
+      "postId": "5",
       "text": "It really depends on the speed.",
       "likes": 86,
       "wasEdited": false
     },
     {
-      "id": 16,
-      "userId": 9,
-      "postId": 6,
+      "id": "16",
+      "userId": "9",
+      "postId": "6",
       "text": "Had a client deleting images from the image library in the CMS, because 'they were already on the website and the library looked full'. And she wondered why that had anything to do with her website only displaying text..",
       "likes": 66,
       "wasEdited": false
     },
     {
-      "id": 17,
-      "userId": 4,
-      "postId": 6,
+      "id": "17",
+      "userId": "4",
+      "postId": "6",
       "text": "Reminds me of one time when a user's PC stopped working and they said they were trying to clear HDD space by deleting the transparent folders in C:\\Windows - you know, the ones that aren't needed...",
       "likes": 53,
       "wasEdited": false
     },
     {
-      "id": 18,
-      "userId": 5,
-      "postId": 6,
+      "id": "18",
+      "userId": "5",
+      "postId": "6",
       "text": "We had a customer deleting the entire folder of active workflows recently and then 1,5 hrs later called in panic that nothing worked anymore. Had to restore a backup from 18 hours before because they didn't think a backup was needed more than once a day.",
       "likes": 43,
       "wasEdited": false
     },
     {
-      "id": 19,
-      "userId": 10,
-      "postId": 6,
+      "id": "19",
+      "userId": "10",
+      "postId": "6",
       "text": "Its like turning your computer off to save ram",
       "likes": 12,
       "wasEdited": false
     },
     {
-      "id": 20,
-      "userId": 8,
-      "postId": 7,
+      "id": "20",
+      "userId": "8",
+      "postId": "7",
       "text": "Maybe I read it the last time I installed this.",
       "likes": 39,
       "wasEdited": false
     },
     {
-      "id": 21,
-      "userId": 10,
-      "postId": 7,
+      "id": "21",
+      "userId": "10",
+      "postId": "7",
       "text": "We've updated our privacy policy.",
       "likes": 27,
       "wasEdited": false
     },
     {
-      "id": 22,
-      "userId": 6,
-      "postId": 7,
+      "id": "22",
+      "userId": "6",
+      "postId": "7",
       "text": "Plot twist: the timer counts only when the installer window is in focus",
       "likes": 53,
       "wasEdited": false
     },
     {
-      "id": 23,
-      "userId": 8,
-      "postId": 8,
+      "id": "23",
+      "userId": "8",
+      "postId": "8",
       "text": "and that random dude who comes to fix a typo or capitalize letters lol",
       "likes": 32,
       "wasEdited": false
     },
     {
-      "id": 24,
-      "userId": 9,
-      "postId": 8,
+      "id": "24",
+      "userId": "9",
+      "postId": "8",
       "text": "Someone 'fixed' a post I made 8 or 9 years after I made it, and his edit made it so some of the syntax was incorrect and he also made the question itself grammatically incorrect.",
       "likes": 47,
       "wasEdited": false
     },
     {
-      "id": 25,
-      "userId": 6,
-      "postId": 8,
+      "id": "25",
+      "userId": "6",
+      "postId": "8",
       "text": "CLASSIC",
       "likes": 88,
       "wasEdited": false
     },
     {
-      "id": 26,
-      "userId": 5,
-      "postId": 8,
+      "id": "26",
+      "userId": "5",
+      "postId": "8",
       "text": "Worst feeling ever when the only post that has the same exact problem as you with - 1 votes and no replies",
       "likes": 56,
       "wasEdited": false
     },
     {
-      "id": 27,
-      "userId": 1,
-      "postId": 9,
+      "id": "27",
+      "userId": "1",
+      "postId": "9",
       "text": "What's awful about this is that it probably actually works.",
       "likes": 47,
       "wasEdited": false
     },
     {
-      "id": 28,
-      "userId": 2,
-      "postId": 9,
+      "id": "28",
+      "userId": "2",
+      "postId": "9",
       "text": "As long as the devices don't draw too much current or don't require a large transmission speed it should be fine.",
       "likes": 27,
       "wasEdited": false
     },
     {
-      "id": 29,
-      "userId": 10,
-      "postId": 9,
+      "id": "29",
+      "userId": "10",
+      "postId": "9",
       "text": "These are my for loops as I’m incrementing through my partner’s 32-D matrix in Matlab because it “makes more sense”",
       "likes": 31,
       "wasEdited": false
     },
     {
-      "id": 30,
-      "userId": 4,
-      "postId": 9,
+      "id": "30",
+      "userId": "4",
+      "postId": "9",
       "text": "Enough 'if'-s to call it AI",
       "likes": 67,
       "wasEdited": false
     },
     {
-      "id": 31,
-      "userId": 7,
-      "postId": 9,
+      "id": "31",
+      "userId": "7",
+      "postId": "9",
       "text": "Looks like a good case for switch.",
       "likes": 9,
       "wasEdited": false
     },
     {
-      "id": 32,
-      "userId": 9,
-      "postId": 10,
+      "id": "32",
+      "userId": "9",
+      "postId": "10",
       "text": "person { breathing: true !important; }",
       "likes": 24,
       "wasEdited": false
     },
     {
-      "id": 33,
-      "userId": 5,
-      "postId": 10,
+      "id": "33",
+      "userId": "5",
+      "postId": "10",
       "text": "We'll see who's laughing when you ask for computer help for the fourth time this week",
       "likes": 37,
       "wasEdited": false
     },
     {
-      "id": 34,
-      "userId": 3,
-      "postId": 10,
+      "id": "34",
+      "userId": "3",
+      "postId": "10",
       "text": "What's that, dad? You need help installing a printer driver?",
       "likes": 97,
       "wasEdited": false
     },
     {
-      "id": 35,
-      "userId": 8,
-      "postId": 10,
+      "id": "35",
+      "userId": "8",
+      "postId": "10",
       "text": "If your dad knows about display:grid, he's cool enough to criticize anyone.",
       "likes": 74,
       "wasEdited": false
     },
     {
-      "id": 36,
-      "userId": 1,
-      "postId": 11,
+      "id": "36",
+      "userId": "1",
+      "postId": "11",
       "text": "The dev and the sales team",
       "likes": 48,
       "wasEdited": false
     },
     {
-      "id": 37,
-      "userId": 3,
-      "postId": 11,
+      "id": "37",
+      "userId": "3",
+      "postId": "11",
       "text": "My favorite split between dev and sales is at company parties, the devs dress up nicely because they rarely do, and the sales people wear the minimum dress code because they are forced to dress nicely most days.",
       "likes": 18,
       "wasEdited": false
     },
     {
-      "id": 38,
-      "userId": 9,
-      "postId": 11,
+      "id": "38",
+      "userId": "9",
+      "postId": "11",
       "text": "The dev and the douchebag from marketing who wants your app done sooner.",
       "likes": 17,
       "wasEdited": false
     },
     {
-      "id": 39,
-      "userId": 8,
-      "postId": 11,
+      "id": "39",
+      "userId": "8",
+      "postId": "11",
       "text": "Experienced dev who technically meets the dress code taking the new hire out for lunch.",
       "likes": 48,
       "wasEdited": false
     },
     {
-      "id": 40,
-      "userId": 4,
-      "postId": 11,
+      "id": "40",
+      "userId": "4",
+      "postId": "11",
       "text": "Nah this is your actual code vs the code you wish you wrote",
       "likes": 11,
       "wasEdited": false
     },
     {
-      "id": 41,
-      "userId": 3,
-      "postId": 12,
+      "id": "41",
+      "userId": "3",
+      "postId": "12",
       "text": "It should slowly fade into a message saying 'pay me'",
       "likes": 96,
       "wasEdited": false
     },
     {
-      "id": 42,
-      "userId": 4,
-      "postId": 12,
+      "id": "42",
+      "userId": "4",
+      "postId": "12",
       "text": "Modern problems require modern solutions.",
       "likes": 21,
       "wasEdited": false
     },
     {
-      "id": 43,
-      "userId": 5,
-      "postId": 12,
+      "id": "43",
+      "userId": "5",
+      "postId": "12",
       "text": "I bet the client won't see that coming.",
       "likes": 42,
       "wasEdited": false
     },
     {
-      "id": 44,
-      "userId": 6,
-      "postId": 12,
+      "id": "44",
+      "userId": "6",
+      "postId": "12",
       "text": "This is a great idea though",
       "likes": 6,
       "wasEdited": false
     },
     {
-      "id": 45,
-      "userId": 7,
-      "postId": 12,
+      "id": "45",
+      "userId": "7",
+      "postId": "12",
       "text": "Link please",
       "likes": 13,
       "wasEdited": false
     },
     {
-      "id": 46,
-      "userId": 6,
-      "postId": 13,
+      "id": "46",
+      "userId": "6",
+      "postId": "13",
       "text": "Hey, you forgot they receive coffees as a donation",
       "likes": 27,
       "wasEdited": false
     },
     {
-      "id": 47,
-      "userId": 7,
-      "postId": 13,
+      "id": "47",
+      "userId": "7",
+      "postId": "13",
       "text": "They also pay rent using github stars.",
       "likes": 61,
       "wasEdited": false
     },
     {
-      "id": 48,
-      "userId": 9,
-      "postId": 13,
+      "id": "48",
+      "userId": "9",
+      "postId": "13",
       "text": "I’ve made a few of those libraries, knowing all too well that they were NEVER going to be used.",
       "likes": 86,
       "wasEdited": false
     },
     {
-      "id": 49,
-      "userId": 10,
-      "postId": 14,
+      "id": "49",
+      "userId": "10",
+      "postId": "14",
       "text": "Hey man I have this really cool app idea..",
       "likes": 22,
       "wasEdited": false
     },
     {
-      "id": 50,
-      "userId": 8,
-      "postId": 14,
+      "id": "50",
+      "userId": "8",
+      "postId": "14",
       "text": "Can you hack a facebook account for me?",
       "likes": 12,
       "wasEdited": false
     },
     {
-      "id": 51,
-      "userId": 7,
-      "postId": 14,
+      "id": "51",
+      "userId": "7",
+      "postId": "14",
       "text": "Every. Single. Family. Reunion.",
       "likes": 64,
       "wasEdited": false
     },
     {
-      "id": 52,
-      "userId": 2,
-      "postId": 14,
+      "id": "52",
+      "userId": "2",
+      "postId": "14",
       "text": "Are you still coding? That's great listen I have this website idea I think you're going to love. When are you free for a quick call?",
       "likes": 8,
       "wasEdited": false
     },
     {
-      "id": 53,
-      "userId": 3,
-      "postId": 15,
+      "id": "53",
+      "userId": "3",
+      "postId": "15",
       "text": "The cherry on top is that the screenshot itself is misaligned.",
       "likes": 28,
       "wasEdited": false
     },
     {
-      "id": 54,
-      "userId": 4,
-      "postId": 15,
+      "id": "54",
+      "userId": "4",
+      "postId": "15",
       "text": "I love the text going off the trophy lol",
       "likes": 15,
       "wasEdited": false
     },
     {
-      "id": 55,
-      "userId": 5,
-      "postId": 15,
+      "id": "55",
+      "userId": "5",
+      "postId": "15",
       "text": "Dev note: Works fine on my trophy",
       "likes": 2,
       "wasEdited": false
     },
     {
-      "id": 56,
-      "userId": 6,
-      "postId": 15,
+      "id": "56",
+      "userId": "6",
+      "postId": "15",
       "text": "Front end developers now also have to think of trophies? When does it stop?!",
       "likes": 6,
       "wasEdited": false
     },
     {
-      "id": 57,
-      "userId": 10,
-      "postId": 16,
+      "id": "57",
+      "userId": "10",
+      "postId": "16",
       "text": "Had a job that did old school releases overnight where you manually overwrite files on a server. Was there so late once that the sun came up while I was still working.",
       "likes": 13,
       "wasEdited": false
     },
     {
-      "id": 58,
-      "userId": 1,
-      "postId": 16,
+      "id": "58",
+      "userId": "1",
+      "postId": "16",
       "text": "In Germany, when you leave work, you can only work again after 11 hours have passed.",
       "likes": 12,
       "wasEdited": false
     },
     {
-      "id": 59,
-      "userId": 3,
-      "postId": 16,
+      "id": "59",
+      "userId": "3",
+      "postId": "16",
       "text": "At 5am, still discussing, then boss mentions he's PTO tomorrow",
       "likes": 4,
       "wasEdited": false
     },
     {
-      "id": 60,
-      "userId": 6,
-      "postId": 16,
+      "id": "60",
+      "userId": "6",
+      "postId": "16",
       "text": "When someone contacting you forgot the time zone difference.",
       "likes": 2,
       "wasEdited": false
     },
     {
-      "id": 61,
-      "userId": 8,
-      "postId": 17,
+      "id": "61",
+      "userId": "8",
+      "postId": "17",
       "text": "And that is how docker got invented.",
       "likes": 3,
       "wasEdited": false
     },
     {
-      "id": 62,
-      "userId": 4,
-      "postId": 18,
+      "id": "62",
+      "userId": "4",
+      "postId": "18",
       "text": "Not gonna lie, that sounds like a daunting interview for a first developer job. Congrats on getting it.",
       "likes": 60,
       "wasEdited": false
     },
     {
-      "id": 63,
-      "userId": 6,
-      "postId": 18,
+      "id": "63",
+      "userId": "6",
+      "postId": "18",
       "text": "Congratulations! Now for coping with the impending hair loss there are a few strategies I can recommend. The most common strategy I see among developers is to just shave it all off. Now of course depending on your facial structure this may not suit you. Thankfully, there are many different ways you can style your hair in order to hide the fact it is rapidly thinning. For gray hairs I would recommend plucking them, as a 28 year old with gray hair may end up catching some odd looks now and then. If you're okay with this however, and they blend in nicely with your natural haircolor, you may be more inclined to keep them. If all else fails, you could always see about getting hair plugs, it seemed to work well for Elon Musk.",
       "likes": 56,
       "wasEdited": false
     },
     {
-      "id": 64,
-      "userId": 8,
-      "postId": 18,
+      "id": "64",
+      "userId": "8",
+      "postId": "18",
       "text": "I got lucky for my first job. The guy who interviewed me didn’t know anything about programming and just gave me a job based on the projects I had in my portfolio",
       "likes": 41,
       "wasEdited": false
     },
     {
-      "id": 65,
-      "userId": 7,
-      "postId": 19,
+      "id": "65",
+      "userId": "7",
+      "postId": "19",
       "text": "I'm currently taking the route from Coursera for online BSc in CS. I don't even have a high school diploma (and I'm too old to add that to my years of studying) but taking the Google IT Support Certification (also online) will give me 12 college credits and access to the degree from University of London through the performance-based admission.",
       "likes": 70,
       "wasEdited": false
     },
     {
-      "id": 66,
-      "userId": 8,
-      "postId": 19,
+      "id": "66",
+      "userId": "8",
+      "postId": "19",
       "text": "You can create some small projects to showcase your skills, put it on Github and link it in your CV.",
       "likes": 32,
       "wasEdited": false
     },
     {
-      "id": 67,
-      "userId": 10,
-      "postId": 19,
+      "id": "67",
+      "userId": "10",
+      "postId": "19",
       "text": "Hi, I'm a Backend Team Lead in a company based in Lahore, Pakistan. If you ever need any help regarding anything be it mentoring or virtual classes feel free to reach out, I'd be more than happy to connect you with our frontend lead. And I understand that just moved from Afghanistan to Iran but if you ever consider moving to Pakistan feel free to get in touch with me and my company's HR department.",
       "likes": 14,
       "wasEdited": false
     },
     {
-      "id": 68,
-      "userId": 9,
-      "postId": 20,
+      "id": "68",
+      "userId": "9",
+      "postId": "20",
       "text": "Now if google search goes down we know who to blame :p",
       "likes": 23,
       "wasEdited": false
     },
     {
-      "id": 69,
-      "userId": 5,
-      "postId": 20,
+      "id": "69",
+      "userId": "5",
+      "postId": "20",
       "text": "i just searched 'search' on google and landed here, What did you do?",
       "likes": 34,
       "wasEdited": false
     },
     {
-      "id": 70,
-      "userId": 3,
-      "postId": 20,
+      "id": "70",
+      "userId": "3",
+      "postId": "20",
       "text": "Real talk, took me like five seconds longer to get google to load. Why’s you break it man? Why?!",
       "likes": 32,
       "wasEdited": false
     },
     {
-      "id": 71,
-      "userId": 1,
-      "postId": 21,
+      "id": "71",
+      "userId": "1",
+      "postId": "21",
       "text": "This reads like the description of a mythical creature",
       "likes": 30,
       "wasEdited": false
     },
     {
-      "id": 72,
-      "userId": 10,
-      "postId": 21,
+      "id": "72",
+      "userId": "10",
+      "postId": "21",
       "text": "I was lucky enough to work with two devs like this. I remember meeting both on my first day, they were sitting next to each other pair programming. I’d never seen anything like it before and was immediately impressed. They were both incredibly knowledgeable about so many topics, one was a gun in infrastructure, DBs and dev ops, where as the other was also a UX expert. This was on top of knowing .net, js, python, ruby etc experts. Plus being helpful, amazing coaches and just generally good people. They we’re truely once in a lifetime kind of people.",
       "likes": 76,
       "wasEdited": false
     },
     {
-      "id": 73,
-      "userId": 9,
-      "postId": 24,
+      "id": "73",
+      "userId": "9",
+      "postId": "24",
       "text": "Theret always fiver",
       "likes": 1,
       "wasEdited": false
     },
     {
-      "id": 74,
-      "userId": 10,
-      "postId": 25,
+      "id": "74",
+      "userId": "10",
+      "postId": "25",
       "text": "I agree too. /nNeed to keep npm updated all the time is hard. I ran Ionic framework and couldn't progress well as in few months time there's always have dependency issues. /nNeedless to say for small development team juggling between multiple projects at a time. 'Last time it was working' wasn't a good excuse to stakeholders... /nIf to keep package.json versioning, we would be risking our apps to security vulnerabilities.",
       "likes": 2,
       "wasEdited": false
