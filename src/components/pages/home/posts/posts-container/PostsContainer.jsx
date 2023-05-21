@@ -23,10 +23,12 @@ const PostsContainer = () => {
         <p>Loading...</p>
       ) : (
         posts.map(post =>
-          <Post
-            key={post.id}
-            post={post}
-          />
+          <Link to={`/post/${post.id}`}>
+            <Post
+              key={post.id}
+              post={post}
+            />
+          </Link>
         )
       )}
     </StyledPostsContainer>
