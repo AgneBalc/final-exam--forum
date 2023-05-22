@@ -40,7 +40,6 @@ const Comment = ({ comment }) => {
   };
 
   const currentUserLike = comment?.likes.find(like => like.userId === loggedInUser?.id);
-  console.log(currentUserLike)
 
   const handleLike = (value) => {
     if (!loggedInUser) {
@@ -69,7 +68,10 @@ const Comment = ({ comment }) => {
         likes: [...comment.likes, newLike],
       })
     };
-  }
+  };
+
+  const totalLikes = comment.likes.reduce((acc, curr) => acc + curr.likeValue, 0)
+
 
   return (
     <StyledComment>
@@ -138,7 +140,7 @@ const Comment = ({ comment }) => {
         <i
           onClick={() => handleLike(1)}
           className="fa-solid fa-caret-up"></i>
-        <span>{comment.likes}</span>
+        <span>{totalLikes}</span>
         <i
           onClick={() => handleLike(-1)}
           className="fa-solid fa-caret-down"></i>

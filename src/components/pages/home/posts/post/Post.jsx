@@ -50,6 +50,8 @@ const Post = ({ post }) => {
     };
   }
 
+  const totalLikes = post.likes.reduce((acc, curr) => acc + curr.likeValue, 0)
+
   return (
     <StyledPost>
       <div className="votes">
@@ -57,7 +59,7 @@ const Post = ({ post }) => {
           onClick={() => handleLike(1)}
           className="fa-solid fa-up-long"
         ></i>
-        {/* <span>{post.likes}</span> */}
+        <span>{totalLikes}</span>
         <i
           onClick={() => handleLike(-1)}
           className="fa-solid fa-down-long"></i>
