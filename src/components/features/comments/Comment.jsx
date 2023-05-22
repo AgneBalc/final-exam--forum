@@ -17,7 +17,8 @@ const Comment = ({ comment }) => {
 
   const handleEditOpen = () => setIsEditOpen(true);
   const handleEditClose = () => {
-    setIsEditOpen(false)
+    setIsEditOpen(false);
+    setCommentValue(comment.text);
     return;
   };
 
