@@ -7,6 +7,7 @@ const POSTS_ACTIONS = {
   ADD: 'add_new_post',
   EDIT: 'edit_post',
   DELETE: 'delete_post',
+  UPDATE_LIKES: 'update_post_likes',
 }
 
 const postsReducer = (state, action) => {
@@ -39,6 +40,24 @@ const postsReducer = (state, action) => {
             text: action.post.text,
             image: action.post.image,
             wasEdited: true
+          }
+        } else {
+          return post;
+        };
+      });
+    case POSTS_ACTIONS.UPDATE_LIKES:
+      return state.map(post => {
+        if (post.id === action.id) {
+          fetch(`http://localhost:8080/posts/${action.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              likes: action.likes
+            })
+          });
+          return {
+            ...post,
+            likes: action.likes
           }
         } else {
           return post;

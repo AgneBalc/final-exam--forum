@@ -1,15 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import StyledPost from "./StyledPost";
 import UsersContext from "../../../../../contexts/users-context";
 import DropdownMenu from "./dropdown-menu/DropdownMenu";
 import CommentsContext from "../../../../../contexts/comments-context";
+import PostsContext, { POSTS_ACTIONS } from "../../../../../contexts/posts-context";
 
 const Post = ({ post }) => {
   const { users: { users, loggedInUser } } = useContext(UsersContext);
+  const { dispatchPosts } = useContext(PostsContext);
   const { comments } = useContext(CommentsContext);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const postAuthor = users.find(user => user.id === post.userId);
 
@@ -17,12 +20,43 @@ const Post = ({ post }) => {
 
   const totalComments = comments.filter(comment => comment.postId === post.id).length;
 
+  const handleLike = (value) => {
+    if (!loggedInUser) {
+      navigate('/login');
+      return;
+    }
+
+    let newLikeValue;
+    const currentUserLike = post?.likes.find(like => like.userId === loggedInUser?.id);
+    if (currentUserLike && currentUserLike.value === value) {
+      newLikeValue = 0;
+    } else {
+      newLikeValue = value;
+    };
+
+    const newLike = {
+      userId: loggedInUser.id,
+      likeValue: newLikeValue,
+    };
+    dispatchPosts({
+      type: POSTS_ACTIONS.UPDATE_LIKES,
+      id: post.id,
+      likes: [...post.likes, newLike],
+    })
+    console.log(newLike)
+  }
+
   return (
     <StyledPost>
       <div className="votes">
-        <i className="fa-solid fa-up-long"></i>
-        <span>{post.likes}</span>
-        <i className="fa-solid fa-down-long"></i>
+        <i
+          onClick={() => handleLike(1)}
+          className="fa-solid fa-up-long"
+        ></i>
+        {/* <span>{post.likes}</span> */}
+        <i
+          onClick={() => handleLike(-1)}
+          className="fa-solid fa-down-long"></i>
       </div>
       {post.wasEdited && (
         <div className="was-edited">

@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
 import StyledPostPage from "./StyledPostPage";
 import PostsContext from "../../../contexts/posts-context";
+import { useParams } from "react-router-dom";
 import Post from "../home/posts/post/Post";
 import CommentsContext from "../../../contexts/comments-context";
 import Comment from "../../features/comments/Comment";

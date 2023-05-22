@@ -78,7 +78,36 @@
       "title": "Why aren’t you playing by the rules of the game!",
       "text": "",
       "image": "https://i.redd.it/bq54d2yu1ss91.jpg",
-      "likes": [],
+      "likes": [
+        {
+          "userId": "2",
+          "likeValue": 1
+        },
+        {
+          "userId": "1",
+          "likeValue": 1
+        },
+        {
+          "userId": "1",
+          "likeValue": -1
+        },
+        {
+          "userId": "1",
+          "likeValue": 1
+        },
+        {
+          "userId": "1",
+          "likeValue": 1
+        },
+        {
+          "userId": "1",
+          "likeValue": 1
+        },
+        {
+          "userId": "1",
+          "likeValue": 1
+        }
+      ],
       "wasEdited": true,
       "dateCreated": "2019-11-25 09:49:19"
     },
