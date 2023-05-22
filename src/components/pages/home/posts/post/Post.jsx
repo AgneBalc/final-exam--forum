@@ -20,6 +20,8 @@ const Post = ({ post }) => {
 
   const totalComments = comments.filter(comment => comment.postId === post.id).length;
 
+  const currentUserLike = post?.likes.find(like => like.userId === loggedInUser?.id);
+
   const handleLike = (value) => {
     if (!loggedInUser) {
       navigate('/login');
@@ -27,23 +29,27 @@ const Post = ({ post }) => {
     }
 
     let newLikeValue;
-    const currentUserLike = post?.likes.find(like => like.userId === loggedInUser?.id);
-    if (currentUserLike && currentUserLike.value === value) {
-      newLikeValue = 0;
+    if (currentUserLike && currentUserLike.likeValue === value) {
+      return;
+    } else if (currentUserLike) {
+      currentUserLike.likeValue = value;
+      dispatchPosts({
+        type: POSTS_ACTIONS.UPDATE_LIKES,
+        id: post.id,
+        likes: [...post.likes],
+      })
     } else {
       newLikeValue = value;
+      const newLike = {
+        userId: loggedInUser.id,
+        likeValue: newLikeValue,
+      };
+      dispatchPosts({
+        type: POSTS_ACTIONS.UPDATE_LIKES,
+        id: post.id,
+        likes: [...post.likes, newLike],
+      })
     };
-
-    const newLike = {
-      userId: loggedInUser.id,
-      likeValue: newLikeValue,
-    };
-    dispatchPosts({
-      type: POSTS_ACTIONS.UPDATE_LIKES,
-      id: post.id,
-      likes: [...post.likes, newLike],
-    })
-    console.log(newLike)
   }
 
   return (

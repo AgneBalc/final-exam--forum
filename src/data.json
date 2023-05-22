@@ -80,31 +80,11 @@
       "image": "https://i.redd.it/bq54d2yu1ss91.jpg",
       "likes": [
         {
+          "userId": "1",
+          "likeValue": 1
+        },
+        {
           "userId": "2",
-          "likeValue": 1
-        },
-        {
-          "userId": "1",
-          "likeValue": 1
-        },
-        {
-          "userId": "1",
-          "likeValue": -1
-        },
-        {
-          "userId": "1",
-          "likeValue": 1
-        },
-        {
-          "userId": "1",
-          "likeValue": 1
-        },
-        {
-          "userId": "1",
-          "likeValue": 1
-        },
-        {
-          "userId": "1",
           "likeValue": 1
         }
       ],
