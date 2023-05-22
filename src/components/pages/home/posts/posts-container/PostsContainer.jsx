@@ -19,8 +19,10 @@ const PostsContainer = () => {
     posts.sort((a, b) => b.totalLikes - a.totalLikes);
   }
 
-
-
+  if (selectedFilter === 'New') {
+    posts.forEach(post => post.dateCreated = new Date(post.dateCreated))
+    posts.sort((a, b) => b.dateCreated - a.dateCreated);
+  }
 
   return (
     <StyledPostsContainer>
