@@ -1,11 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import StyledComment from "./StyledComment";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import UsersContext from "../../../contexts/users-context";
+import CommentMenu from "./comment-menu/CommentMenu";
 
 const Comment = ({ comment }) => {
-  const { users: { users } } = useContext(UsersContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { users: { users, loggedInUser } } = useContext(UsersContext);
   const commentAuthor = users.find(user => user.id === comment.userId);
+
+  const toggleOpenMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <StyledComment>
@@ -15,6 +19,15 @@ const Comment = ({ comment }) => {
           <span>Edited</span>
         </div>
       )}
+      {loggedInUser && loggedInUser.id === commentAuthor.id && (
+        <div
+          className="openMenu"
+          onClick={toggleOpenMenu}
+        >
+          <i className="fa-solid fa-ellipsis"></i>
+        </div>
+      )}
+      {isMenuOpen && <CommentMenu comment={comment} />}
       <div className="votes">
         <i className="fa-solid fa-caret-up"></i>
         <span>{comment.likes}</span>
