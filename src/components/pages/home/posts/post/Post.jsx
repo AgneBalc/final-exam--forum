@@ -4,22 +4,24 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import StyledPost from "./StyledPost";
 import UsersContext from "../../../../../contexts/users-context";
 import DropdownMenu from "./dropdown-menu/DropdownMenu";
+import CommentsContext from "../../../../../contexts/comments-context";
 
 const Post = ({ post }) => {
   const { users: { users, loggedInUser } } = useContext(UsersContext);
+  const { comments } = useContext(CommentsContext);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
   const postAuthor = users.find(user => user.id === post.userId);
 
   const handleDropdownMenu = () => setIsUserMenuOpen(!isUserMenuOpen);
 
+  const totalComments = comments.filter(comment => comment.postId === post.id).length;
+
   return (
     <StyledPost>
       <div className="votes">
-        {/* <i className="fa-solid fa-caret-up"></i> */}
         <i className="fa-solid fa-up-long"></i>
         <span>{post.likes}</span>
-        {/* <i className="fa-solid fa-caret-down"></i> */}
         <i className="fa-solid fa-down-long"></i>
       </div>
       {post.wasEdited && (
@@ -47,10 +49,9 @@ const Post = ({ post }) => {
           {post.text &&
             <p className="text">{post.text}</p>}
         </div>
-        <div className="comments">
+        <div className="comments-number">
           <i className="fa-regular fa-message"></i>
-          {/* SUTVARKYTIT KOMENTARU SKAICIU!!!! */}
-          <p>3 Comments</p>
+          <p>{totalComments} Comments</p>
         </div>
       </Link>
     </StyledPost>

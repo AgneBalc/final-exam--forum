@@ -999,6 +999,15 @@
       "likes": 2,
       "wasEdited": false,
       "dateCreated": "2023-05-10 12:00:24"
+    },
+    {
+      "id": "025808b8-5858-44ae-8f5c-a0895f38bdc7",
+      "userId": "3",
+      "postId": "1",
+      "text": "New Comment (edited)",
+      "likes": 0,
+      "wasEdited": true,
+      "dateCreated": "2023-05-22T07:56:41.687Z"
     }
   ]
 }
