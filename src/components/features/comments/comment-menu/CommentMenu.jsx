@@ -1,14 +1,19 @@
 import { useContext } from "react";
 import CommentsContext, { COMMENTS_ACTIONS } from "../../../../contexts/comments-context";
 
-const CommentMenu = ({ comment }) => {
-  const { comments, dispatchComments } = useContext(CommentsContext);
+const CommentMenu = ({ comment, toggleOpenMenu, handleEditOpen }) => {
+  const { dispatchComments } = useContext(CommentsContext);
   // const {
   //   toggleModal,
   //   handleModalClose,
   //   isEditModalOpen,
   //   dispatchPosts
   // } = useContext(PostsContext);
+
+  const handleEditComment = () => {
+    handleEditOpen();
+    toggleOpenMenu();
+  }
 
   const handleDeleteComment = () => dispatchComments({
     type: COMMENTS_ACTIONS.DELETE,
@@ -19,7 +24,7 @@ const CommentMenu = ({ comment }) => {
     <div>
       <div
         className="edit"
-      // onClick={toggleModal}
+        onClick={handleEditComment}
       >
         <i className="fa-solid fa-pencil"></i>
         <span>Edit comment</span>
