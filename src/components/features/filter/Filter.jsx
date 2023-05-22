@@ -1,4 +1,3 @@
-import { useState } from "react";
 import StyledFilter from "./StyledFilter";
 
 const filterButtons = [
@@ -20,8 +19,7 @@ const filterButtons = [
   },
 ];
 
-const Filter = () => {
-  const [selectedFilter, setSelectedFilter] = useState(filterButtons[0].title);
+const Filter = ({ selectedFilter, setSelectedFilter }) => {
 
   return (
     <StyledFilter>

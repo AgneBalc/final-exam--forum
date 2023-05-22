@@ -97,7 +97,36 @@
       "title": "Ya’ll I did it. I am now officially a frontend developer. HIRED",
       "text": "After ranting on here last week about how much i sucked at data structures and algorithms. i lifted myself up (largely due to the inspiring words i received in this sub) and i got to work. /nwell yesterday i had my third and longest interview with a company… AND TODAY THEY NOTIFIED ME THAT I GOT THE JOB. /nthey started by giving me 3 timed leetcode/hackerank questions. /nthen i had to whiteboard 😫. and the code had to work when written in the ide. n/lastly was a conversational tech interview where they pretty much sat me down in front of 3 geniuses with stone faces (no expression, no smiles, nothing). and they basically rapid fire asked me questions related to frontend. and a little backend.",
       "image": "",
-      "likes": [],
+      "likes": [
+        {
+          "userId": "1",
+          "likeValue": 1
+        },
+        {
+          "userId": "2",
+          "likeValue": 1
+        },
+        {
+          "userId": "5",
+          "likeValue": -1
+        },
+        {
+          "userId": "3",
+          "likeValue": 1
+        },
+        {
+          "userId": "4",
+          "likeValue": -1
+        },
+        {
+          "userId": "6",
+          "likeValue": 1
+        },
+        {
+          "userId": "7",
+          "likeValue": 1
+        }
+      ],
       "wasEdited": false,
       "dateCreated": "2019-12-04 12:00:24"
     },
@@ -107,7 +136,48 @@
       "title": "Steal what is stolen",
       "text": "",
       "image": "https://i.redd.it/hwurhp7crzf81.png",
-      "likes": [],
+      "likes": [
+        {
+          "userId": "1",
+          "likeValue": 1
+        },
+        {
+          "userId": "2",
+          "likeValue": 1
+        },
+        {
+          "userId": "3",
+          "likeValue": 1
+        },
+        {
+          "userId": "4",
+          "likeValue": 1
+        },
+        {
+          "userId": "5",
+          "likeValue": 1
+        },
+        {
+          "userId": "6",
+          "likeValue": 1
+        },
+        {
+          "userId": "7",
+          "likeValue": 1
+        },
+        {
+          "userId": "8",
+          "likeValue": 1
+        },
+        {
+          "userId": "9",
+          "likeValue": 1
+        },
+        {
+          "userId": "10",
+          "likeValue": 1
+        }
+      ],
       "wasEdited": false,
       "dateCreated": "2020-04-05 12:00:24"
     },
@@ -127,7 +197,32 @@
       "title": "I’m a girl from afghanistan learning programming",
       "text": "Well I don’t have any right to go to university and have education. Because I’m a woman. I’m 21 years old and I really love technology , recently i have moved to iran but here there is not much i can do either. My goal is to become a programmer find a job abroad and save my life and my family. I have been to many courses I’m a front end developer recently I’m learning java but I don’t have any degree , is there any way i can get a degree online something that companies accept and find a job abroad and make it out of here?",
       "image": "",
-      "likes": [],
+      "likes": [
+        {
+          "userId": "1",
+          "likeValue": -1
+        },
+        {
+          "userId": "2",
+          "likeValue": -1
+        },
+        {
+          "userId": "3",
+          "likeValue": -1
+        },
+        {
+          "userId": "4",
+          "likeValue": -1
+        },
+        {
+          "userId": "5",
+          "likeValue": -1
+        },
+        {
+          "userId": "6",
+          "likeValue": -1
+        }
+      ],
       "wasEdited": false,
       "dateCreated": "2022-05-25 12:00:24"
     },
@@ -167,7 +262,32 @@
       "title": "Just pushed my first commit to Google Search!",
       "text": "I've recently gotten a job at Google and today was the first time my code was approved for production! Damn does it feel good to know your own code is out there! Time to celebrate!",
       "image": "",
-      "likes": [],
+      "likes": [
+        {
+          "userId": "1",
+          "likeValue": 1
+        },
+        {
+          "userId": "2",
+          "likeValue": -1
+        },
+        {
+          "userId": "3",
+          "likeValue": 1
+        },
+        {
+          "userId": "4",
+          "likeValue": 1
+        },
+        {
+          "userId": "5",
+          "likeValue": 1
+        },
+        {
+          "userId": "6",
+          "likeValue": 1
+        }
+      ],
       "wasEdited": false,
       "dateCreated": "2019-06-04 12:00:24"
     },
@@ -197,7 +317,24 @@
       "title": "Amazing new developer who joined my company",
       "text": "Recently a new developer joined our team at the company I work and the guy is out of this world. He can see a codebase once, spend an hour max and understand how to navigate through it immediately. We have projects in multiple programming languages and even though he has not worked with them he can easily get around. Now I know people will say 'but all languages share common patters'. Yes, it's true but the guy is able to go through a 3k line project (just one of the many microservices we have) he has never seen before in a language he has never seen before and find the issue in less than 2-3 hours. Also he is knowledge in all areas. DevOps, FE, BE, data analysis, security... it's insane. And on top of all of that our product is really big and complex and people have spend years working in this company and still have gaps yet he seems to pick everything up extremely fast and connect everything together. I really look up to him and admire him but I know he is a very rare case as no one else in my entire company comes even close to that. And he doesn't call himself by a fancy title like many other people do. He always says 'I'm just a developer' and is really extremely humble. And on top of all of that he is always open to help or teach others. I no longer want to become senior, tech lead or principle engineer but rather become someone like him one day.",
       "image": "",
-      "likes": [],
+      "likes": [
+        {
+          "userId": "1",
+          "likeValue": 1
+        },
+        {
+          "userId": "2",
+          "likeValue": 1
+        },
+        {
+          "userId": "3",
+          "likeValue": 1
+        },
+        {
+          "userId": "6",
+          "likeValue": 1
+        }
+      ],
       "wasEdited": false,
       "dateCreated": "2023-03-17 12:00:24"
     },
