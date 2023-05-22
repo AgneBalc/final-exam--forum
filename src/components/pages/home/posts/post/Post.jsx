@@ -28,7 +28,6 @@ const Post = ({ post }) => {
       return;
     }
 
-    let newLikeValue;
     if (currentUserLike && currentUserLike.likeValue === value) {
       return;
     } else if (currentUserLike) {
@@ -39,10 +38,9 @@ const Post = ({ post }) => {
         likes: [...post.likes],
       })
     } else {
-      newLikeValue = value;
       const newLike = {
         userId: loggedInUser.id,
-        likeValue: newLikeValue,
+        likeValue: value,
       };
       dispatchPosts({
         type: POSTS_ACTIONS.UPDATE_LIKES,
