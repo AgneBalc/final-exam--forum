@@ -348,7 +348,12 @@
       "userId": "6",
       "postId": "1",
       "text": "As long as they haven't received a signed contract from you, they have no reason to believe you aren't also interviewing elsewhere.",
-      "likes": [],
+      "likes": [
+        {
+          "userId": "2",
+          "likeValue": 1
+        }
+      ],
       "wasEdited": false,
       "dateCreated": "2019-11-25 10:49:19"
     },
@@ -375,7 +380,12 @@
       "userId": "7",
       "postId": "2",
       "text": "It's our code",
-      "likes": [],
+      "likes": [
+        {
+          "userId": "2",
+          "likeValue": 1
+        }
+      ],
       "wasEdited": false,
       "dateCreated": "2019-12-04 13:00:24"
     },
@@ -897,7 +907,12 @@
       "userId": "4",
       "postId": "18",
       "text": "Not gonna lie, that sounds like a daunting interview for a first developer job. Congrats on getting it.",
-      "likes": [],
+      "likes": [
+        {
+          "userId": "2",
+          "likeValue": -1
+        }
+      ],
       "wasEdited": false,
       "dateCreated": "2020-01-04 12:00:24"
     },

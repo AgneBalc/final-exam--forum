@@ -4,6 +4,7 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import UsersContext from "../../../contexts/users-context";
 import CommentMenu from "./comment-menu/CommentMenu";
 import CommentsContext, { COMMENTS_ACTIONS } from "../../../contexts/comments-context";
+import { useNavigate } from "react-router-dom";
 
 const Comment = ({ comment }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +12,8 @@ const Comment = ({ comment }) => {
   const [commentValue, setCommentValue] = useState(comment.text);
   const { dispatchComments } = useContext(CommentsContext);
   const { users: { users, loggedInUser } } = useContext(UsersContext);
+  const navigate = useNavigate();
+
   const commentAuthor = users.find(user => user.id === comment.userId);
 
   const toggleOpenMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -34,6 +37,38 @@ const Comment = ({ comment }) => {
       comment: editedComment,
     });
     handleEditClose();
+  };
+
+  const currentUserLike = comment?.likes.find(like => like.userId === loggedInUser?.id);
+  console.log(currentUserLike)
+
+  const handleLike = (value) => {
+    if (!loggedInUser) {
+      navigate('/login');
+      return;
+    }
+
+    if (currentUserLike && currentUserLike.likeValue === value) {
+      return;
+    } else if (currentUserLike) {
+      currentUserLike.likeValue = value;
+      dispatchComments({
+        type: COMMENTS_ACTIONS.UPDATE_LIKES,
+        id: comment.id,
+        likes: [...comment.likes],
+      })
+    } else {
+      const newLike = {
+        userId: loggedInUser.id,
+        likeValue: value,
+      };
+      console.log(newLike)
+      dispatchComments({
+        type: COMMENTS_ACTIONS.UPDATE_LIKES,
+        id: comment.id,
+        likes: [...comment.likes, newLike],
+      })
+    };
   }
 
   return (
@@ -100,9 +135,13 @@ const Comment = ({ comment }) => {
         </div>
       </div>
       <div className="votes">
-        <i className="fa-solid fa-caret-up"></i>
+        <i
+          onClick={() => handleLike(1)}
+          className="fa-solid fa-caret-up"></i>
         <span>{comment.likes}</span>
-        <i className="fa-solid fa-caret-down"></i>
+        <i
+          onClick={() => handleLike(-1)}
+          className="fa-solid fa-caret-down"></i>
       </div>
     </StyledComment>
   );

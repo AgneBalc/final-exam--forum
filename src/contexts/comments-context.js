@@ -7,6 +7,7 @@ const COMMENTS_ACTIONS = {
   ADD: 'add_new_comments',
   EDIT: 'edit_comment',
   DELETE: 'delete_comment',
+  UPDATE_LIKES: 'update_comment_likes',
 }
 
 const commentsReducer = (state, action) => {
@@ -45,6 +46,24 @@ const commentsReducer = (state, action) => {
         method: 'DELETE'
       });
       return state.filter(comment => comment.id !== action.id);
+    case COMMENTS_ACTIONS.UPDATE_LIKES:
+      return state.map(comment => {
+        if (comment.id === action.id) {
+          fetch(`http://localhost:8080/comments/${action.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              likes: action.likes
+            })
+          });
+          return {
+            ...comment,
+            likes: action.likes
+          }
+        } else {
+          return comment;
+        };
+      });
     default:
       return state;
   }

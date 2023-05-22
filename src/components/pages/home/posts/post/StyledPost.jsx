@@ -47,6 +47,7 @@ const StyledPost = styled.div`
     i {
       font-size: 1.5rem;
       color: #9a9ea0;
+      cursor: pointer;
       &:first-child:hover {
         color: rgb(0, 121, 211);
       }
