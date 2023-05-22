@@ -23,10 +23,6 @@ padding: 1rem;
       height: 100%;
       cursor: pointer;
       color: #878a8c;
-      /* border-width: 0px 1px 1px 0px;
-      border-style: solid;
-      border-bottom-color: #edeff1;
-      border-right-color: #edeff1; */
       border: 1px solid #1797a04f;
       background-color: #fff;
       &:hover {

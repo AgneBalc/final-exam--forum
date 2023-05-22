@@ -1,3 +1,6 @@
+import { useState } from "react";
+import StyledFilter from "./StyledFilter";
+
 const filterButtons = [
   {
     icon: "fa-solid fa-rocket",
@@ -18,19 +21,21 @@ const filterButtons = [
 ];
 
 const Filter = () => {
+  const [selectedFilter, setSelectedFilter] = useState(filterButtons[0].title);
+
   return (
-    <section>
+    <StyledFilter>
       {filterButtons.map((item, index) => (
         <button
           key={index}
-        // onClick={() => setSelectedTab(item.title)}
-        // className={item.title === selectedTab ? 'selected' : ''}
+          onClick={() => setSelectedFilter(item.title)}
+          className={item.title === selectedFilter ? 'selected' : ''}
         >
           <i className={item.icon}></i>
           <span>{item.title}</span>
         </button>
       ))}
-    </section>
+    </StyledFilter>
   );
 }
 
