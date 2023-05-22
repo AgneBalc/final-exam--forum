@@ -22,14 +22,14 @@ const PostPage = () => {
       <Post
         post={post}
       />
-      {isLoggedIn && (
-        <CreateComment
-          loggedInUser={loggedInUser}
-          post={post}
-        />
-      )
-      }
-      <section className="comments">
+      <section className="all-comments">
+        {isLoggedIn && (
+          <CreateComment
+            loggedInUser={loggedInUser}
+            post={post}
+          />
+        )
+        }
         {currentPostComments.map(comment =>
           <Comment
             key={comment.id}

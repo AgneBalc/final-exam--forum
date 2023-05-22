@@ -49,7 +49,7 @@ const Post = ({ post }) => {
           {post.text &&
             <p className="text">{post.text}</p>}
         </div>
-        <div className="comments">
+        <div className="comments-number">
           <i className="fa-regular fa-message"></i>
           <p>{totalComments} Comments</p>
         </div>

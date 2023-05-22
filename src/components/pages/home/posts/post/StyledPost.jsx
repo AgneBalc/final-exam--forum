@@ -88,7 +88,7 @@ const StyledPost = styled.div`
       mask-image: linear-gradient(180deg,#000 60%,transparent);
     }
   }
-  .comments {
+  .comments-number {
     display: flex;
     align-items: center;
     color: #898989;

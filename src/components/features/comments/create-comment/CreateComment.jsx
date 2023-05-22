@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { v4 as generatedId } from 'uuid';
 import CommentsContext, { COMMENTS_ACTIONS } from "../../../../contexts/comments-context";
+import StyledCreateComment from "./StyledCreateComent";
 
 const CreateComment = ({ loggedInUser, post }) => {
   const [commentValue, setCommentValue] = useState('');
@@ -27,22 +28,22 @@ const CreateComment = ({ loggedInUser, post }) => {
   }
 
   return (
-    <section>
-      <p>Comment as {loggedInUser.username}</p>
+    <StyledCreateComment>
+      <img src={loggedInUser.picture} alt={loggedInUser.username} />
       <form onSubmit={handleSubmit}>
         <textarea
           id="comment"
           value={commentValue}
           onChange={handleInputChange}
-          placeholder="What are your thoughts?"
+          placeholder="Write a comment..."
         />
         {commentValue.trim().length === 0 ? (
-          <button type="submit" disabled>Add</button>
+          <button type="submit" disabled><i className="fa-regular fa-paper-plane"></i></button>
         ) : (
-          <button type="submit">Add</button>
+          <button type="submit"><i className="fa-regular fa-paper-plane"></i></button>
         )}
       </form>
-    </section>
+    </StyledCreateComment>
   );
 }
 
