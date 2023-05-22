@@ -43,7 +43,6 @@ const CreatePost = () => {
         wasEdited: false,
         dateCreated: new Date(),
       };
-      console.log(newPost);
 
       dispatchPosts({
         type: POSTS_ACTIONS.ADD,

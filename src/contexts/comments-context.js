@@ -75,4 +75,4 @@ const CommentsProvider = ({ children }) => {
 };
 
 export default CommentsContext;
-export { CommentsProvider };
+export { CommentsProvider, COMMENTS_ACTIONS };
