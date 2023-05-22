@@ -4,21 +4,23 @@ import StyledPostsContainer from "./StyledPostsContainer";
 import PostsContext from "../../../../../contexts/posts-context";
 import Post from "../post/Post";
 import UsersContext from "../../../../../contexts/users-context";
+import Filter from "../../../../features/filter/Filter";
 
 const PostsContainer = () => {
   const { posts } = useContext(PostsContext);
-  const { users: { isLoggedIn } } = useContext(UsersContext);
+  const { users: { isLoggedIn, loggedInUser } } = useContext(UsersContext);
 
   return (
     <StyledPostsContainer>
       {isLoggedIn && (
         <div className="addPost">
-          <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png" alt="" />
+          <img src={loggedInUser.picture} alt={loggedInUser.username} />
           <Link to='/add'>
             <input type="text" placeholder="Create Post" />
           </Link>
         </div>
       )}
+      <Filter />
       {posts?.length === 0 ? (
         <p>Loading...</p>
       ) : (
