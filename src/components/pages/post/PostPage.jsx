@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import StyledPostPage from "./StyledPostPage";
 import PostsContext from "../../../contexts/posts-context";
 import { useNavigate, useParams } from "react-router-dom";
@@ -17,6 +17,12 @@ const PostPage = () => {
 
   const post = posts.find(post => post.id === id)
   const currentPostComments = comments.filter(comment => comment.postId === id);
+
+  if (!posts.length) {
+    return (
+      <p>Loading...</p>
+    )
+  };
 
   return (
     <StyledPostPage>

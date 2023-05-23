@@ -57,7 +57,7 @@ const PostsContainer = () => {
         setSelectedFilter={setSelectedFilter}
         selectedFilter={selectedFilter}
       />
-      {filterPosts?.length === 0 ? (
+      {!filterPosts.length ? (
         <p>Loading...</p>
       ) : (
         filterPosts.map(post =>
