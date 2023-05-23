@@ -24,7 +24,7 @@ const PostPage = () => {
         className="close"
         onClick={() => navigate('/')}
       >
-        <i class="fa-solid fa-xmark"></i>
+        <i className="fa-solid fa-xmark"></i>
         <span>Close</span>
       </button>
       <Post
