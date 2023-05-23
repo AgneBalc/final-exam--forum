@@ -9,7 +9,7 @@ import PostsContext, { POSTS_ACTIONS } from "../../../../../contexts/posts-conte
 import Modal from "../../../../UI/modal/Modal";
 import EditPost from "./edit-post/EditPost";
 
-const Post = ({ post }) => {
+const Post = ({ post, className }) => {
   const { users: { users, loggedInUser } } = useContext(UsersContext);
   const { dispatchPosts } = useContext(PostsContext);
   const { comments } = useContext(CommentsContext);
@@ -95,14 +95,17 @@ const Post = ({ post }) => {
           <EditPost handleModalClose={handleModalClose} post={post} />
         </Modal>
       )}
-      <Link to={`/post/${post.id}`}>
+      <Link to={`${post.id}`}>
         <div className="content">
           <p>Posted by {postAuthor.username} {formatDistanceToNow(new Date(post.dateCreated))} ago</p>
           <h2>{post.title}</h2>
           {post.image &&
-            <img src={post.image} alt={post.title} />}
+            <img
+              className={className}
+              src={post.image}
+              alt={post.title} />}
           {post.text &&
-            <p className="text">{post.text}</p>}
+            <p className={`text ${className}`}>{post.text}</p>}
         </div>
         <div className="comments-number">
           <i className="fa-regular fa-message"></i>

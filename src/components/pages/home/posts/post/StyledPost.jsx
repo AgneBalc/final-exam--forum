@@ -75,18 +75,30 @@ const StyledPost = styled.div`
       overflow-wrap: break-word;
     }
     >img {
-      max-height: 500px;
       object-fit: contain;
+      &.all-posts {
+        max-height: 500px;
+      }
+      &.post-page{
+        max-height: 700px;
+      }
     }
     .text {
-      max-height: 100px;
-      overflow: hidden;
+      /* max-height: 100px; */
+      /* overflow: hidden; */
       font-size: 14px;
       word-wrap: break-word;
       color: rgb(28, 28, 28);
       font-weight: 300;
-      -webkit-mask-image: linear-gradient(180deg,#000 60%,transparent);
-      mask-image: linear-gradient(180deg,#000 60%,transparent);
+      &.all-posts {
+        max-height: 100px;
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(180deg,#000 60%,transparent);
+        mask-image: linear-gradient(180deg,#000 60%,transparent);
+      }
+      /* &.post-page{
+        max-height: 700px;
+      } */
     }
   }
   .comments-number {

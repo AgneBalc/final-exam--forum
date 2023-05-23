@@ -19,7 +19,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/add' element={isLoggedIn ? <CreatePost /> : <Navigate to='/login' />} />
-        <Route path='/post/:id' element={<PostPage />} />
+        <Route path='/:id' element={<PostPage />} />
       </Routes>
     </>
   );

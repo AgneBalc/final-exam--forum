@@ -62,6 +62,7 @@ const PostsContainer = () => {
       ) : (
         filterPosts.map(post =>
           <Post
+            className='all-posts'
             post={post}
             key={post.id}
           />
