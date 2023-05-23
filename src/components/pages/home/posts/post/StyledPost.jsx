@@ -84,8 +84,6 @@ const StyledPost = styled.div`
       }
     }
     .text {
-      /* max-height: 100px; */
-      /* overflow: hidden; */
       font-size: 14px;
       word-wrap: break-word;
       color: rgb(28, 28, 28);
@@ -96,9 +94,6 @@ const StyledPost = styled.div`
         -webkit-mask-image: linear-gradient(180deg,#000 60%,transparent);
         mask-image: linear-gradient(180deg,#000 60%,transparent);
       }
-      /* &.post-page{
-        max-height: 700px;
-      } */
     }
   }
   .comments-number {

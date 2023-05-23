@@ -95,7 +95,7 @@ const Post = ({ post, className }) => {
           <EditPost handleModalClose={handleModalClose} post={post} />
         </Modal>
       )}
-      <Link to={`${post.id}`}>
+      <Link to={`/post/${post.id}`}>
         <div className="content">
           <p>Posted by {postAuthor.username} {formatDistanceToNow(new Date(post.dateCreated))} ago</p>
           <h2>{post.title}</h2>

@@ -7,7 +7,7 @@ const Sidebar = () => {
       <div>
         <h3>About</h3>
         <div className="content">
-          <p>A forum for all questions, humor and jokes relating programmers and programming.</p>
+          <p>A forum for all questions, humor and jokes relating to programmers and programming.</p>
           <Link to='/add'>
             <button>Create Post</button>
           </Link>

@@ -24,10 +24,12 @@ const Header = () => {
         </Link>
         {isLoggedIn ? (
           <div className="loggedIn">
-            <div className="user-info">
-              <img src={loggedInUser.picture} alt={loggedInUser.username} />
-              <span>{loggedInUser.username}</span>
-            </div>
+            <Link to={`/user/${loggedInUser.username}`}>
+              <div className="user-info">
+                <img src={loggedInUser.picture} alt={loggedInUser.username} />
+                <span>{loggedInUser.username}</span>
+              </div>
+            </Link>
             <Button onClick={handleLogout}>Log out</Button>
           </div>
         ) : (
