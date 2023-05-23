@@ -9,7 +9,6 @@ const EmptyTab = ({ message }) => {
             className="fa-solid fa-up-long"
           ></i>
           <div></div>
-          {/* <span>{totalLikes}</span> */}
           <i
             className="fa-solid fa-down-long"></i>
         </div>

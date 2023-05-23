@@ -22,7 +22,6 @@ const Comment = ({ comment }) => {
   const handleEditClose = () => {
     setIsEditOpen(false);
     setCommentValue(comment.text);
-    return;
   };
 
   const handleInputChange = (e) => setCommentValue(e.target.value);
@@ -117,7 +116,7 @@ const Comment = ({ comment }) => {
                   <i className="fa-solid fa-xmark"></i>
                   Cancel
                 </button>
-                {commentValue.trim().length === 0 ? (
+                {!commentValue.trim().length ? (
                   <button type="submit" disabled>
                     <i className="fa-solid fa-floppy-disk"></i>
                     Save
