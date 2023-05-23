@@ -1,16 +1,22 @@
 import { Link } from "react-router-dom";
 import StyledSidebar from "./StyledSidebar";
+import { useContext } from "react";
+import UsersContext from "../../../contexts/users-context";
 
 const Sidebar = () => {
+  const { users: { isLoggedIn } } = useContext(UsersContext);
+
   return (
     <StyledSidebar>
       <div>
         <h3>About</h3>
         <div className="content">
           <p>A forum for all questions, humor and jokes relating to programmers and programming.</p>
-          <Link to='/add'>
-            <button>Create Post</button>
-          </Link>
+          {isLoggedIn && (
+            <Link to='/add'>
+              <button>Create Post</button>
+            </Link>
+          )}
         </div>
       </div>
       <div>
