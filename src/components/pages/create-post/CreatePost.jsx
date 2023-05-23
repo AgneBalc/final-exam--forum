@@ -39,7 +39,7 @@ const CreatePost = () => {
         title: values.title,
         text: values.text,
         image: values.image,
-        likes: 0,
+        likes: [],
         wasEdited: false,
         dateCreated: new Date(),
       };

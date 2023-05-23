@@ -5,7 +5,7 @@ import Button from "../../UI/button/Button";
 import { useFormik } from "formik";
 import { useContext, useState } from "react";
 import UsersContext, { USERS_ACTIONS } from "../../../contexts/users-context";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [error, setError] = useState('');
@@ -63,7 +63,7 @@ const Login = () => {
         {error && <p className="errorMsg">{error}</p>}
         <Button type='submit'>Log In</Button>
         <div className="sign-up">
-          <p>Don't have an account? <a href="/">Sign up</a></p>
+          <p>Don't have an account? <Link to='/signup'>Sign up</Link></p>
         </div>
       </Form>
     </StyledLogin>

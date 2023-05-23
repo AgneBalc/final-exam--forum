@@ -61,7 +61,6 @@ const Comment = ({ comment }) => {
         userId: loggedInUser.id,
         likeValue: value,
       };
-      console.log(newLike)
       dispatchComments({
         type: COMMENTS_ACTIONS.UPDATE_LIKES,
         id: comment.id,
