@@ -1,16 +1,16 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import StyledPostsContainer from "./StyledPostsContainer";
-import PostsContext from "../../../../../contexts/posts-context";
+import PostsContext from "../../../../contexts/posts-context";
 import Post from "../post/Post";
-import UsersContext from "../../../../../contexts/users-context";
-import Filter from "../../../../features/filter/Filter";
-import CommentsContext from "../../../../../contexts/comments-context";
+import UsersContext from "../../../../contexts/users-context";
+import Filter from "../../filter/Filter";
+import CommentsContext from "../../../../contexts/comments-context";
 
 const PostsContainer = () => {
   const { posts } = useContext(PostsContext);
   const { comments } = useContext(CommentsContext);
-  const { users: { isLoggedIn, loggedInUser } } = useContext(UsersContext);
+  const { users: { loggedInUser } } = useContext(UsersContext);
   const [selectedFilter, setSelectedFilter] = useState(null);
 
   const filterPostsFunc = () => {
@@ -45,7 +45,7 @@ const PostsContainer = () => {
 
   return (
     <StyledPostsContainer>
-      {isLoggedIn && (
+      {loggedInUser && (
         <div className="addPost">
           <img src={loggedInUser.picture} alt={loggedInUser.username} />
           <Link to='/add'>
@@ -57,11 +57,12 @@ const PostsContainer = () => {
         setSelectedFilter={setSelectedFilter}
         selectedFilter={selectedFilter}
       />
-      {filterPosts?.length === 0 ? (
+      {!filterPosts.length ? (
         <p>Loading...</p>
       ) : (
         filterPosts.map(post =>
           <Post
+            className='all-posts'
             post={post}
             key={post.id}
           />

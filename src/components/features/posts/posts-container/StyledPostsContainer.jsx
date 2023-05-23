@@ -5,7 +5,6 @@ const StyledPostsContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: 2rem auto;
   .addPost {
     height: 58px;
     padding: 0.5rem;

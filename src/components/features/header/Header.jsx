@@ -1,11 +1,11 @@
-import { Link, useNavigate } from "react-router-dom";
-import Button from "../UI/button/Button";
-import StyledHeader from "./StyledHeader";
 import { useContext } from "react";
-import UsersContext, { USERS_ACTIONS } from "../../contexts/users-context";
+import { Link, useNavigate } from "react-router-dom";
+import Button from "../../UI/button/Button";
+import StyledHeader from "./StyledHeader";
+import UsersContext, { USERS_ACTIONS } from "../../../contexts/users-context";
 
 const Header = () => {
-  const { users: { isLoggedIn, loggedInUser }, dispatchUsers } = useContext(UsersContext);
+  const { users: { loggedInUser }, dispatchUsers } = useContext(UsersContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -22,12 +22,14 @@ const Header = () => {
             alt="logo"
           />
         </Link>
-        {isLoggedIn ? (
+        {loggedInUser ? (
           <div className="loggedIn">
-            <div className="user-info">
-              <img src={loggedInUser.picture} alt={loggedInUser.username} />
-              <span>{loggedInUser.username}</span>
-            </div>
+            <Link to={`/user/${loggedInUser.username}`}>
+              <div className="user-info">
+                <img src={loggedInUser.picture} alt={loggedInUser.username} />
+                <span>{loggedInUser.username}</span>
+              </div>
+            </Link>
             <Button onClick={handleLogout}>Log out</Button>
           </div>
         ) : (

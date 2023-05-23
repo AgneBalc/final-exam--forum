@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import StyledComment from "./StyledComment";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
-import UsersContext from "../../../contexts/users-context";
-import CommentMenu from "./comment-menu/CommentMenu";
-import CommentsContext, { COMMENTS_ACTIONS } from "../../../contexts/comments-context";
+import UsersContext from "../../../../contexts/users-context";
+import CommentMenu from "../comment-menu/CommentMenu";
+import CommentsContext, { COMMENTS_ACTIONS } from "../../../../contexts/comments-context";
 import { useNavigate } from "react-router-dom";
 
 const Comment = ({ comment }) => {
@@ -22,7 +22,6 @@ const Comment = ({ comment }) => {
   const handleEditClose = () => {
     setIsEditOpen(false);
     setCommentValue(comment.text);
-    return;
   };
 
   const handleInputChange = (e) => setCommentValue(e.target.value);
@@ -117,17 +116,10 @@ const Comment = ({ comment }) => {
                   <i className="fa-solid fa-xmark"></i>
                   Cancel
                 </button>
-                {commentValue.trim().length === 0 ? (
-                  <button type="submit" disabled>
-                    <i className="fa-solid fa-floppy-disk"></i>
-                    Save
-                  </button>
-                ) : (
-                  <button type="submit">
-                    <i className="fa-solid fa-floppy-disk"></i>
-                    Save
-                  </button>
-                )}
+                <button type="submit" disabled={commentValue.trim().length === 0} >
+                  <i className="fa-solid fa-floppy-disk"></i>
+                  Save
+                </button>
               </div>
             </form>
           ) : (

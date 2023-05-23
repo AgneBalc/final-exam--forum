@@ -33,6 +33,8 @@ const StyledHeader = styled.header`
       align-items: center;
       gap: 0.5rem;
       cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
       >img{
         height: 1.5rem;
       }

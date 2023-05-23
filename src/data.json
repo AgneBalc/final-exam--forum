@@ -1169,6 +1169,15 @@
       "likes": [],
       "wasEdited": true,
       "dateCreated": "2023-05-22T07:56:41.687Z"
+    },
+    {
+      "id": "5b2f9fb1-df95-44af-a33b-f1dbc23dd9f3",
+      "userId": "1",
+      "postId": "1",
+      "text": "Test",
+      "likes": [],
+      "wasEdited": false,
+      "dateCreated": "2023-05-23T12:50:41.104Z"
     }
   ]
 }

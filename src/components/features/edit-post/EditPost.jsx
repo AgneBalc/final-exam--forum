@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { useFormik } from "formik";
 import StyledEditPost from "./StyledEditPost";
-import Button from "../../../../../UI/button/Button";
-import PostsContext, { POSTS_ACTIONS } from "../../../../../../contexts/posts-context";
+import Button from "../../UI/button/Button";
+import PostsContext, { POSTS_ACTIONS } from "../../../contexts/posts-context";
 
 const formTabs = [
   {
@@ -15,8 +15,8 @@ const formTabs = [
   }
 ];
 
-const EditPost = ({ post }) => {
-  const { dispatchPosts, handleModalClose } = useContext(PostsContext);
+const EditPost = ({ post, handleModalClose }) => {
+  const { dispatchPosts } = useContext(PostsContext);
 
   const initialValues = {
     title: post.title,
@@ -37,7 +37,6 @@ const EditPost = ({ post }) => {
         text: values.text,
         image: values.image,
       };
-      console.log(editedPost);
       dispatchPosts({
         type: POSTS_ACTIONS.EDIT,
         post: editedPost,
