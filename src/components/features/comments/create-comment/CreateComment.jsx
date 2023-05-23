@@ -16,7 +16,7 @@ const CreateComment = ({ loggedInUser, post }) => {
       userId: loggedInUser.id,
       postId: post.id,
       text: commentValue,
-      likes: 0,
+      likes: [],
       wasEdited: false,
       dateCreated: new Date(),
     };
