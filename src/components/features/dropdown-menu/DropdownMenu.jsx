@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import StyledDropdownMenu from "./StyledDropdown";
-import PostsContext, { POSTS_ACTIONS } from "../../../../../../contexts/posts-context";
+import PostsContext, { POSTS_ACTIONS } from "../../../contexts/posts-context";
 
 const DropdownMenu = ({ post, toggleDropdownMenu, handleModalOpen }) => {
   const { dispatchPosts } = useContext(PostsContext);

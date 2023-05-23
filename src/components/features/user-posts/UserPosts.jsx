@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import EmptyTab from "../empty-tab/EmptyTab";
 import StyledUserPosts from "./StyledUserPosts";
-import PostsContext from "../../../../contexts/posts-context";
-import Post from "../../home/posts/post/Post";
+import PostsContext from "../../../contexts/posts-context";
+import Post from "../posts/post/Post";
 
 const UserPosts = ({ loggedInUser }) => {
   const { posts } = useContext(PostsContext);

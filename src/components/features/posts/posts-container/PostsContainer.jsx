@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import StyledPostsContainer from "./StyledPostsContainer";
-import PostsContext from "../../../../../contexts/posts-context";
+import PostsContext from "../../../../contexts/posts-context";
 import Post from "../post/Post";
-import UsersContext from "../../../../../contexts/users-context";
-import Filter from "../../../../features/filter/Filter";
-import CommentsContext from "../../../../../contexts/comments-context";
+import UsersContext from "../../../../contexts/users-context";
+import Filter from "../../filter/Filter";
+import CommentsContext from "../../../../contexts/comments-context";
 
 const PostsContainer = () => {
   const { posts } = useContext(PostsContext);

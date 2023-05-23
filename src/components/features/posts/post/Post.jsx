@@ -2,12 +2,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import StyledPost from "./StyledPost";
-import UsersContext from "../../../../../contexts/users-context";
-import DropdownMenu from "./dropdown-menu/DropdownMenu";
-import CommentsContext from "../../../../../contexts/comments-context";
-import PostsContext, { POSTS_ACTIONS } from "../../../../../contexts/posts-context";
-import Modal from "../../../../UI/modal/Modal";
-import EditPost from "./edit-post/EditPost";
+import UsersContext from "../../../../contexts/users-context";
+import DropdownMenu from "../../dropdown-menu/DropdownMenu";
+import CommentsContext from "../../../../contexts/comments-context";
+import PostsContext, { POSTS_ACTIONS } from "../../../../contexts/posts-context";
+import Modal from "../../../UI/modal/Modal";
+import EditPost from "../../edit-post/EditPost";
 
 const Post = ({ post, className }) => {
   const { users: { users, loggedInUser } } = useContext(UsersContext);

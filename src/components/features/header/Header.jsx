@@ -1,8 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
-import Button from "../UI/button/Button";
-import StyledHeader from "./StyledHeader";
 import { useContext } from "react";
-import UsersContext, { USERS_ACTIONS } from "../../contexts/users-context";
+import { Link, useNavigate } from "react-router-dom";
+import Button from "../../UI/button/Button";
+import StyledHeader from "./StyledHeader";
+import UsersContext, { USERS_ACTIONS } from "../../../contexts/users-context";
 
 const Header = () => {
   const { users: { loggedInUser }, dispatchUsers } = useContext(UsersContext);

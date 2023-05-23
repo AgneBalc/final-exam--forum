@@ -1,11 +1,10 @@
 import { useContext, useState } from "react";
 import StyledUserPage from "./StyledUserPage";
-import UserPosts from "./user-posts/UserPosts";
+import UserPosts from "../../features/user-posts/UserPosts";
 import UsersContext from "../../../contexts/users-context";
-import UserComments from "./user-comments/UserComments";
-import UserLikes from "./user-likes/UserLikes";
-import UserDislikes from "./user-dislikes/UserDislikes";
-import { Link } from "react-router-dom";
+import UserComments from "../../features/user-comments/UserComments";
+import UserLikes from "../../features/user-likes/UserLikes";
+import UserDislikes from "../../features/user-dislikes/UserDislikes";
 
 const navTabs = [
   'POSTED',

@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import EmptyTab from "../empty-tab/EmptyTab";
-import CommentsContext from "../../../../contexts/comments-context";
-import PostsContext from "../../../../contexts/posts-context";
+import CommentsContext from "../../../contexts/comments-context";
+import PostsContext from "../../../contexts/posts-context";
 import StyledUserComments from "./StyledUserComments";
-import Post from "../../home/posts/post/Post";
+import Post from "../posts/post/Post";
 
 const UserComments = ({ loggedInUser }) => {
   const { comments } = useContext(CommentsContext);

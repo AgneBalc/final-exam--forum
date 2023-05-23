@@ -1,6 +1,6 @@
 import Sidebar from "../../features/sidebar/Sidebar";
 import StyledHome from "./StyledHome";
-import PostsContainer from "./posts/posts-container/PostsContainer";
+import PostsContainer from "../../features/posts/posts-container/PostsContainer";
 
 const Home = () => {
   return (

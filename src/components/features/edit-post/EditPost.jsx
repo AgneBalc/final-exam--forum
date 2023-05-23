@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { useFormik } from "formik";
 import StyledEditPost from "./StyledEditPost";
-import Button from "../../../../../UI/button/Button";
-import PostsContext, { POSTS_ACTIONS } from "../../../../../../contexts/posts-context";
+import Button from "../../UI/button/Button";
+import PostsContext, { POSTS_ACTIONS } from "../../../contexts/posts-context";
 
 const formTabs = [
   {

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import EmptyTab from "../empty-tab/EmptyTab";
-import PostsContext from "../../../../contexts/posts-context";
-import Post from "../../home/posts/post/Post";
+import PostsContext from "../../../contexts/posts-context";
+import Post from "../posts/post/Post";
 import StyledUserDislikes from "./StyledUserDislikes";
 
 const UserDislikes = ({ loggedInUser }) => {

@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import StyledComment from "./StyledComment";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
-import UsersContext from "../../../contexts/users-context";
-import CommentMenu from "./comment-menu/CommentMenu";
-import CommentsContext, { COMMENTS_ACTIONS } from "../../../contexts/comments-context";
+import UsersContext from "../../../../contexts/users-context";
+import CommentMenu from "../comment-menu/CommentMenu";
+import CommentsContext, { COMMENTS_ACTIONS } from "../../../../contexts/comments-context";
 import { useNavigate } from "react-router-dom";
 
 const Comment = ({ comment }) => {

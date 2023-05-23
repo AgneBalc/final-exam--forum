@@ -2,9 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import StyledPostPage from "./StyledPostPage";
 import PostsContext from "../../../contexts/posts-context";
 import { useNavigate, useParams } from "react-router-dom";
-import Post from "../home/posts/post/Post";
+import Post from "../../features/posts/post/Post";
 import CommentsContext from "../../../contexts/comments-context";
-import Comment from "../../features/comments/Comment";
+import Comment from "../../features/comments/comment/Comment";
 import UsersContext from "../../../contexts/users-context";
 import CreateComment from "../../features/comments/create-comment/CreateComment";
 
