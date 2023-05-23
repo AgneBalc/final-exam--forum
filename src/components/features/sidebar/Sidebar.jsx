@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import StyledSidebar from "./StyledSidebar";
 
 const Sidebar = () => {
@@ -7,7 +8,9 @@ const Sidebar = () => {
         <h3>About</h3>
         <div className="content">
           <p>A forum for all questions, humor and jokes relating programmers and programming.</p>
-          <button>Create Post</button>
+          <Link to='/add'>
+            <button>Create Post</button>
+          </Link>
         </div>
       </div>
       <div>
