@@ -1,3 +1,4 @@
+import Sidebar from "../../features/sidebar/Sidebar";
 import StyledHome from "./StyledHome";
 import PostsContainer from "./posts/posts-container/PostsContainer";
 
@@ -11,7 +12,10 @@ const Home = () => {
           Memes, jokes and questions about programming
         </h1>
       </section>
-      <PostsContainer />
+      <div className="main-content">
+        <PostsContainer />
+        <Sidebar />
+      </div>
     </StyledHome>
   );
 }

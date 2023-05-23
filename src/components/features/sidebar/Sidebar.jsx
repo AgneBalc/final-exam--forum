@@ -1,0 +1,30 @@
+import StyledSidebar from "./StyledSidebar";
+
+const Sidebar = () => {
+  return (
+    <StyledSidebar>
+      <div>
+        <h3>About</h3>
+        <div className="content">
+          <p>A forum for all questions, humor and jokes relating programmers and programming.</p>
+          <button>Create Post</button>
+        </div>
+      </div>
+      <div>
+        <h3>Rules</h3>
+        <div className="content">
+          <ol>
+            <li>No off-topic posts</li>
+            <li>No reposts</li>
+            <li>No low-quality content</li>
+            <li>Any common post will be removed if it's not novel</li>
+            <li>Put effort into your titles</li>
+            <li>No spam or tasteless self-promotion</li>
+          </ol>
+        </div>
+      </div>
+    </StyledSidebar>
+  );
+}
+
+export default Sidebar;

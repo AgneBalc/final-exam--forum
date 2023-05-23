@@ -21,6 +21,12 @@ const StyledHome = styled.main`
       }
     }
   }
+  .main-content {
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
 `;
 
 export default StyledHome;
