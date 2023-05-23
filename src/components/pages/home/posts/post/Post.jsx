@@ -6,17 +6,23 @@ import UsersContext from "../../../../../contexts/users-context";
 import DropdownMenu from "./dropdown-menu/DropdownMenu";
 import CommentsContext from "../../../../../contexts/comments-context";
 import PostsContext, { POSTS_ACTIONS } from "../../../../../contexts/posts-context";
+import Modal from "../../../../UI/modal/Modal";
+import EditPost from "./edit-post/EditPost";
 
 const Post = ({ post }) => {
   const { users: { users, loggedInUser } } = useContext(UsersContext);
   const { dispatchPosts } = useContext(PostsContext);
   const { comments } = useContext(CommentsContext);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const navigate = useNavigate();
 
   const postAuthor = users.find(user => user.id === post.userId);
 
-  const handleDropdownMenu = () => setIsUserMenuOpen(!isUserMenuOpen);
+  const handleModalClose = () => setIsEditModalOpen(false);
+  const handleModalOpen = () => setIsEditModalOpen(true);
+
+  const toggleDropdownMenu = () => setIsUserMenuOpen(!isUserMenuOpen);
 
   const totalComments = comments.filter(comment => comment.postId === post.id).length;
 
@@ -74,12 +80,21 @@ const Post = ({ post }) => {
         <>
           <div
             className="openMenu"
-            onClick={handleDropdownMenu}>
+            onClick={toggleDropdownMenu}>
             <i className="fa-solid fa-ellipsis"></i>
           </div>
-          {isUserMenuOpen && <DropdownMenu post={post} />}
+          {isUserMenuOpen &&
+            <DropdownMenu
+              post={post}
+              toggleDropdownMenu={toggleDropdownMenu}
+              handleModalOpen={handleModalOpen} />}
         </>
       ) : null}
+      {isEditModalOpen && (
+        <Modal onClose={handleModalClose} className='edit-modal'>
+          <EditPost handleModalClose={handleModalClose} post={post} />
+        </Modal>
+      )}
       <Link to={`/post/${post.id}`}>
         <div className="content">
           <p>Posted by {postAuthor.username} {formatDistanceToNow(new Date(post.dateCreated))} ago</p>

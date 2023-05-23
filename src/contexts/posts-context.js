@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer, useState } from "react";
+import { createContext, useEffect, useReducer } from "react";
 
 const PostsContext = createContext();
 
@@ -75,7 +75,6 @@ const postsReducer = (state, action) => {
 
 const PostsProvider = ({ children }) => {
   const [posts, dispatchPosts] = useReducer(postsReducer, []);
-  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:8080/posts')
@@ -86,17 +85,11 @@ const PostsProvider = ({ children }) => {
       }))
   }, []);
 
-  const handleModalClose = () => setIsEditModalOpen(false);
-  const toggleModal = () => setIsEditModalOpen(!isEditModalOpen);
-
   return (
     <PostsContext.Provider
       value={{
         posts,
         dispatchPosts,
-        handleModalClose,
-        isEditModalOpen,
-        toggleModal
       }}
     >
       {children}
