@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import StyledPostPage from "./StyledPostPage";
 import PostsContext from "../../../contexts/posts-context";
 import { useNavigate, useParams } from "react-router-dom";

@@ -116,17 +116,10 @@ const Comment = ({ comment }) => {
                   <i className="fa-solid fa-xmark"></i>
                   Cancel
                 </button>
-                {!commentValue.trim().length ? (
-                  <button type="submit" disabled>
-                    <i className="fa-solid fa-floppy-disk"></i>
-                    Save
-                  </button>
-                ) : (
-                  <button type="submit">
-                    <i className="fa-solid fa-floppy-disk"></i>
-                    Save
-                  </button>
-                )}
+                <button type="submit" disabled={commentValue.trim().length === 0} >
+                  <i className="fa-solid fa-floppy-disk"></i>
+                  Save
+                </button>
               </div>
             </form>
           ) : (

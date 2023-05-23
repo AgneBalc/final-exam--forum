@@ -37,11 +37,9 @@ const CreateComment = ({ loggedInUser, post }) => {
           onChange={handleInputChange}
           placeholder="Write a comment..."
         />
-        {commentValue.trim().length === 0 ? (
-          <button type="submit" disabled><i className="fa-regular fa-paper-plane"></i></button>
-        ) : (
-          <button type="submit"><i className="fa-regular fa-paper-plane"></i></button>
-        )}
+        <button type="submit"
+          disabled={commentValue.trim().length === 0}
+        ><i className="fa-regular fa-paper-plane"></i></button>
       </form>
     </StyledCreateComment>
   );
