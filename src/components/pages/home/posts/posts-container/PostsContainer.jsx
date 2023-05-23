@@ -10,7 +10,7 @@ import CommentsContext from "../../../../../contexts/comments-context";
 const PostsContainer = () => {
   const { posts } = useContext(PostsContext);
   const { comments } = useContext(CommentsContext);
-  const { users: { isLoggedIn, loggedInUser } } = useContext(UsersContext);
+  const { users: { loggedInUser } } = useContext(UsersContext);
   const [selectedFilter, setSelectedFilter] = useState(null);
 
   const filterPostsFunc = () => {
@@ -45,7 +45,7 @@ const PostsContainer = () => {
 
   return (
     <StyledPostsContainer>
-      {isLoggedIn && (
+      {loggedInUser && (
         <div className="addPost">
           <img src={loggedInUser.picture} alt={loggedInUser.username} />
           <Link to='/add'>

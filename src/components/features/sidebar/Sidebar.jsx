@@ -4,7 +4,7 @@ import { useContext } from "react";
 import UsersContext from "../../../contexts/users-context";
 
 const Sidebar = () => {
-  const { users: { isLoggedIn } } = useContext(UsersContext);
+  const { users: { loggedInUser } } = useContext(UsersContext);
 
   return (
     <StyledSidebar>
@@ -12,7 +12,7 @@ const Sidebar = () => {
         <h3>About</h3>
         <div className="content">
           <p>A forum for all questions, humor and jokes relating to programmers and programming.</p>
-          {isLoggedIn && (
+          {loggedInUser && (
             <Link to='/add'>
               <button>Create Post</button>
             </Link>

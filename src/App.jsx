@@ -11,7 +11,7 @@ import PostPage from './components/pages/post/PostPage';
 import UserPage from './components/pages/user-page/UserPage';
 
 function App() {
-  const { users: { isLoggedIn } } = useContext(UsersContext);
+  const { users: { loggedInUser } } = useContext(UsersContext);
   return (
     <>
       <Header />
@@ -19,7 +19,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path='/add' element={isLoggedIn ? <CreatePost /> : <Navigate to='/login' />} />
+        <Route path='/add' element={loggedInUser ? <CreatePost /> : <Navigate to='/login' />} />
         <Route path='/post/:id' element={<PostPage />} />
         <Route path='/user/:username' element={<UserPage />} />
       </Routes>

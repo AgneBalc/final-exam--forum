@@ -5,7 +5,7 @@ import { useContext } from "react";
 import UsersContext, { USERS_ACTIONS } from "../../contexts/users-context";
 
 const Header = () => {
-  const { users: { isLoggedIn, loggedInUser }, dispatchUsers } = useContext(UsersContext);
+  const { users: { loggedInUser }, dispatchUsers } = useContext(UsersContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -22,7 +22,7 @@ const Header = () => {
             alt="logo"
           />
         </Link>
-        {isLoggedIn ? (
+        {loggedInUser ? (
           <div className="loggedIn">
             <Link to={`/user/${loggedInUser.username}`}>
               <div className="user-info">

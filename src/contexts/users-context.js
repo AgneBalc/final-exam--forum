@@ -4,7 +4,6 @@ const UsersContext = createContext();
 
 const initialState = {
   users: [],
-  isLoggedIn: localStorage.getItem('loggedInUser') ? true : false,
   loggedInUser: JSON.parse(localStorage.getItem('loggedInUser')),
 };
 
@@ -28,16 +27,15 @@ const usersReducer = (state, action) => {
       localStorage.setItem('loggedInUser', JSON.stringify(action.user));
       return {
         ...state,
-        isLoggedIn: true,
         loggedInUser: action.user,
         users: [...state.users, action.user]
       };
     case USERS_ACTIONS.LOGIN:
       localStorage.setItem('loggedInUser', JSON.stringify(action.user));
-      return { ...state, isLoggedIn: true, loggedInUser: action.user };
+      return { ...state, loggedInUser: action.user };
     case USERS_ACTIONS.LOGOUT:
       localStorage.removeItem('loggedInUser');
-      return { ...state, isLoggedIn: false, loggedInUser: null };
+      return { ...state, loggedInUser: null };
     default:
       return state;
   }

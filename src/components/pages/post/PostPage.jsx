@@ -11,7 +11,7 @@ import CreateComment from "../../features/comments/create-comment/CreateComment"
 const PostPage = () => {
   const { posts } = useContext(PostsContext);
   const { comments } = useContext(CommentsContext);
-  const { users: { isLoggedIn, loggedInUser } } = useContext(UsersContext);
+  const { users: { loggedInUser } } = useContext(UsersContext);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -38,7 +38,7 @@ const PostPage = () => {
         post={post}
       />
       <section className="all-comments">
-        {isLoggedIn && (
+        {loggedInUser && (
           <CreateComment
             loggedInUser={loggedInUser}
             post={post}
